@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>akimach.note - Notebook</title><link href="/" rel="alternate"></link><link href="/feeds/notebook.atom.xml" rel="self"></link><id>/</id><updated>2017-11-06T00:00:00+09:00</updated><entry><title>Linear regression of Housing Values in Suburbs of Boston using PyData</title><link href="/linear-regression-with-python.html" rel="alternate"></link><published>2017-11-06T00:00:00+09:00</published><updated>2017-11-06T00:00:00+09:00</updated><author><name>akimach</name></author><id>tag:None,2017-11-06:/linear-regression-with-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>akimach.note - Notebook</title><link href="/" rel="alternate"></link><link href="/feeds/notebook.atom.xml" rel="self"></link><id>/</id><updated>2017-11-06T00:00:00+09:00</updated><entry><title>Linear regression of Boston Housing Dataset using PyData</title><link href="/linear-regression-with-python.html" rel="alternate"></link><published>2017-11-06T00:00:00+09:00</published><updated>2017-11-06T00:00:00+09:00</updated><author><name>akimach</name></author><id>tag:None,2017-11-06:/linear-regression-with-python.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;Linear regression of Housing Values in Suburbs of Boston using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
@@ -993,7 +993,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;Linear regression of Housing Values in Suburbs of Boston using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
