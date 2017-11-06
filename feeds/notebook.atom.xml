@@ -4,7 +4,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;Linear regression of Boston Housing Dataset using R&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;Linear regression of Boston Housing Dataset using R&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -12,7 +12,8 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -993,7 +994,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;Linear regression of Boston Housing Dataset using R&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;Linear regression of Boston Housing Dataset using R&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1001,87 +1002,113 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;url &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="s"&gt;"https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv"&lt;/span&gt;
-path &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="s"&gt;"/tmp/Boston.csv"&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;url &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv&amp;quot;&lt;/span&gt;
+path &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/tmp/Boston.csv&amp;quot;&lt;/span&gt;
 download.file&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; path&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;df &lt;span class="o"&gt;&lt;-&lt;/span&gt; read.csv&lt;span class="p"&gt;(&lt;/span&gt;path&lt;span class="p"&gt;,&lt;/span&gt; header &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class="p"&gt;(&lt;/span&gt;path&lt;span class="p"&gt;,&lt;/span&gt; header &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea "&gt;
 &lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;X&lt;/th&gt;&lt;th scope="col"&gt;crim&lt;/th&gt;&lt;th scope="col"&gt;zn&lt;/th&gt;&lt;th scope="col"&gt;indus&lt;/th&gt;&lt;th scope="col"&gt;chas&lt;/th&gt;&lt;th scope="col"&gt;nox&lt;/th&gt;&lt;th scope="col"&gt;rm&lt;/th&gt;&lt;th scope="col"&gt;age&lt;/th&gt;&lt;th scope="col"&gt;dis&lt;/th&gt;&lt;th scope="col"&gt;rad&lt;/th&gt;&lt;th scope="col"&gt;tax&lt;/th&gt;&lt;th scope="col"&gt;ptratio&lt;/th&gt;&lt;th scope="col"&gt;black&lt;/th&gt;&lt;th scope="col"&gt;lstat&lt;/th&gt;&lt;th scope="col"&gt;medv&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;1      &lt;/td&gt;&lt;td&gt;0.00632&lt;/td&gt;&lt;td&gt;18     &lt;/td&gt;&lt;td&gt;2.31   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.538  &lt;/td&gt;&lt;td&gt;6.575  &lt;/td&gt;&lt;td&gt;65.2   &lt;/td&gt;&lt;td&gt;4.0900 &lt;/td&gt;&lt;td&gt;1      &lt;/td&gt;&lt;td&gt;296    &lt;/td&gt;&lt;td&gt;15.3   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;4.98   &lt;/td&gt;&lt;td&gt;24.0   &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;0.02731&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;7.07   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.469  &lt;/td&gt;&lt;td&gt;6.421  &lt;/td&gt;&lt;td&gt;78.9   &lt;/td&gt;&lt;td&gt;4.9671 &lt;/td&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;242    &lt;/td&gt;&lt;td&gt;17.8   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;9.14   &lt;/td&gt;&lt;td&gt;21.6   &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;0.02729&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;7.07   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.469  &lt;/td&gt;&lt;td&gt;7.185  &lt;/td&gt;&lt;td&gt;61.1   &lt;/td&gt;&lt;td&gt;4.9671 &lt;/td&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;242    &lt;/td&gt;&lt;td&gt;17.8   &lt;/td&gt;&lt;td&gt;392.83 &lt;/td&gt;&lt;td&gt;4.03   &lt;/td&gt;&lt;td&gt;34.7   &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;4      &lt;/td&gt;&lt;td&gt;0.03237&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;6.998  &lt;/td&gt;&lt;td&gt;45.8   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;394.63 &lt;/td&gt;&lt;td&gt;2.94   &lt;/td&gt;&lt;td&gt;33.4   &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;5      &lt;/td&gt;&lt;td&gt;0.06905&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;7.147  &lt;/td&gt;&lt;td&gt;54.2   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;5.33   &lt;/td&gt;&lt;td&gt;36.2   &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;6      &lt;/td&gt;&lt;td&gt;0.02985&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;6.430  &lt;/td&gt;&lt;td&gt;58.7   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;394.12 &lt;/td&gt;&lt;td&gt;5.21   &lt;/td&gt;&lt;td&gt;28.7   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;1      &lt;/td&gt;&lt;td&gt;0.00632&lt;/td&gt;&lt;td&gt;18     &lt;/td&gt;&lt;td&gt;2.31   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.538  &lt;/td&gt;&lt;td&gt;6.575  &lt;/td&gt;&lt;td&gt;65.2   &lt;/td&gt;&lt;td&gt;4.0900 &lt;/td&gt;&lt;td&gt;1      &lt;/td&gt;&lt;td&gt;296    &lt;/td&gt;&lt;td&gt;15.3   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;4.98   &lt;/td&gt;&lt;td&gt;24.0   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;0.02731&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;7.07   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.469  &lt;/td&gt;&lt;td&gt;6.421  &lt;/td&gt;&lt;td&gt;78.9   &lt;/td&gt;&lt;td&gt;4.9671 &lt;/td&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;242    &lt;/td&gt;&lt;td&gt;17.8   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;9.14   &lt;/td&gt;&lt;td&gt;21.6   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;0.02729&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;7.07   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.469  &lt;/td&gt;&lt;td&gt;7.185  &lt;/td&gt;&lt;td&gt;61.1   &lt;/td&gt;&lt;td&gt;4.9671 &lt;/td&gt;&lt;td&gt;2      &lt;/td&gt;&lt;td&gt;242    &lt;/td&gt;&lt;td&gt;17.8   &lt;/td&gt;&lt;td&gt;392.83 &lt;/td&gt;&lt;td&gt;4.03   &lt;/td&gt;&lt;td&gt;34.7   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;4      &lt;/td&gt;&lt;td&gt;0.03237&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;6.998  &lt;/td&gt;&lt;td&gt;45.8   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;394.63 &lt;/td&gt;&lt;td&gt;2.94   &lt;/td&gt;&lt;td&gt;33.4   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;5      &lt;/td&gt;&lt;td&gt;0.06905&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;7.147  &lt;/td&gt;&lt;td&gt;54.2   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;396.90 &lt;/td&gt;&lt;td&gt;5.33   &lt;/td&gt;&lt;td&gt;36.2   &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;6      &lt;/td&gt;&lt;td&gt;0.02985&lt;/td&gt;&lt;td&gt; 0     &lt;/td&gt;&lt;td&gt;2.18   &lt;/td&gt;&lt;td&gt;0      &lt;/td&gt;&lt;td&gt;0.458  &lt;/td&gt;&lt;td&gt;6.430  &lt;/td&gt;&lt;td&gt;58.7   &lt;/td&gt;&lt;td&gt;6.0622 &lt;/td&gt;&lt;td&gt;3      &lt;/td&gt;&lt;td&gt;222    &lt;/td&gt;&lt;td&gt;18.7   &lt;/td&gt;&lt;td&gt;394.12 &lt;/td&gt;&lt;td&gt;5.21   &lt;/td&gt;&lt;td&gt;28.7   &lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Statistic"&gt;Statistic&lt;a class="anchor-link" href="#Statistic"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Statistic"&gt;Statistic&lt;a class="anchor-link" href="#Statistic"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea "&gt;
 &lt;pre&gt;       X              crim                zn             indus      
  Min.   :  1.0   Min.   : 0.00632   Min.   :  0.00   Min.   : 0.46  
@@ -1112,106 +1139,142 @@ download.file&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;url&lt;/
  3rd Qu.:396.23   3rd Qu.:16.95   3rd Qu.:25.00  
  Max.   :396.90   Max.   :37.97   Max.   :50.00  &lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Correlation-coefficient¶"&gt;Correlation coefficient¶&lt;a class="anchor-link" href="#Correlation-coefficient¶"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Correlation-coefficient¶"&gt;Correlation coefficient&amp;#182;&lt;a class="anchor-link" href="#Correlation-coefficient¶"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea "&gt;
 &lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;X&lt;/th&gt;&lt;th scope="col"&gt;crim&lt;/th&gt;&lt;th scope="col"&gt;zn&lt;/th&gt;&lt;th scope="col"&gt;indus&lt;/th&gt;&lt;th scope="col"&gt;chas&lt;/th&gt;&lt;th scope="col"&gt;nox&lt;/th&gt;&lt;th scope="col"&gt;rm&lt;/th&gt;&lt;th scope="col"&gt;age&lt;/th&gt;&lt;th scope="col"&gt;dis&lt;/th&gt;&lt;th scope="col"&gt;rad&lt;/th&gt;&lt;th scope="col"&gt;tax&lt;/th&gt;&lt;th scope="col"&gt;ptratio&lt;/th&gt;&lt;th scope="col"&gt;black&lt;/th&gt;&lt;th scope="col"&gt;lstat&lt;/th&gt;&lt;th scope="col"&gt;medv&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;X&lt;/th&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.40740717 &lt;/td&gt;&lt;td&gt;-0.10339336 &lt;/td&gt;&lt;td&gt; 0.39943885 &lt;/td&gt;&lt;td&gt;-0.003759115&lt;/td&gt;&lt;td&gt; 0.39873617 &lt;/td&gt;&lt;td&gt;-0.07997115 &lt;/td&gt;&lt;td&gt; 0.20378351 &lt;/td&gt;&lt;td&gt;-0.30221096 &lt;/td&gt;&lt;td&gt; 0.686001976&lt;/td&gt;&lt;td&gt; 0.66662592 &lt;/td&gt;&lt;td&gt; 0.2910742  &lt;/td&gt;&lt;td&gt;-0.29504123 &lt;/td&gt;&lt;td&gt; 0.2584648  &lt;/td&gt;&lt;td&gt;-0.2266036  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;crim&lt;/th&gt;&lt;td&gt; 0.407407172&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.20046922 &lt;/td&gt;&lt;td&gt; 0.40658341 &lt;/td&gt;&lt;td&gt;-0.055891582&lt;/td&gt;&lt;td&gt; 0.42097171 &lt;/td&gt;&lt;td&gt;-0.21924670 &lt;/td&gt;&lt;td&gt; 0.35273425 &lt;/td&gt;&lt;td&gt;-0.37967009 &lt;/td&gt;&lt;td&gt; 0.625505145&lt;/td&gt;&lt;td&gt; 0.58276431 &lt;/td&gt;&lt;td&gt; 0.2899456  &lt;/td&gt;&lt;td&gt;-0.38506394 &lt;/td&gt;&lt;td&gt; 0.4556215  &lt;/td&gt;&lt;td&gt;-0.3883046  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;zn&lt;/th&gt;&lt;td&gt;-0.103393357&lt;/td&gt;&lt;td&gt;-0.20046922 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.53382819 &lt;/td&gt;&lt;td&gt;-0.042696719&lt;/td&gt;&lt;td&gt;-0.51660371 &lt;/td&gt;&lt;td&gt; 0.31199059 &lt;/td&gt;&lt;td&gt;-0.56953734 &lt;/td&gt;&lt;td&gt; 0.66440822 &lt;/td&gt;&lt;td&gt;-0.311947826&lt;/td&gt;&lt;td&gt;-0.31456332 &lt;/td&gt;&lt;td&gt;-0.3916785  &lt;/td&gt;&lt;td&gt; 0.17552032 &lt;/td&gt;&lt;td&gt;-0.4129946  &lt;/td&gt;&lt;td&gt; 0.3604453  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;indus&lt;/th&gt;&lt;td&gt; 0.399438850&lt;/td&gt;&lt;td&gt; 0.40658341 &lt;/td&gt;&lt;td&gt;-0.53382819 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.062938027&lt;/td&gt;&lt;td&gt; 0.76365145 &lt;/td&gt;&lt;td&gt;-0.39167585 &lt;/td&gt;&lt;td&gt; 0.64477851 &lt;/td&gt;&lt;td&gt;-0.70802699 &lt;/td&gt;&lt;td&gt; 0.595129275&lt;/td&gt;&lt;td&gt; 0.72076018 &lt;/td&gt;&lt;td&gt; 0.3832476  &lt;/td&gt;&lt;td&gt;-0.35697654 &lt;/td&gt;&lt;td&gt; 0.6037997  &lt;/td&gt;&lt;td&gt;-0.4837252  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;chas&lt;/th&gt;&lt;td&gt;-0.003759115&lt;/td&gt;&lt;td&gt;-0.05589158 &lt;/td&gt;&lt;td&gt;-0.04269672 &lt;/td&gt;&lt;td&gt; 0.06293803 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.09120281 &lt;/td&gt;&lt;td&gt; 0.09125123 &lt;/td&gt;&lt;td&gt; 0.08651777 &lt;/td&gt;&lt;td&gt;-0.09917578 &lt;/td&gt;&lt;td&gt;-0.007368241&lt;/td&gt;&lt;td&gt;-0.03558652 &lt;/td&gt;&lt;td&gt;-0.1215152  &lt;/td&gt;&lt;td&gt; 0.04878848 &lt;/td&gt;&lt;td&gt;-0.0539293  &lt;/td&gt;&lt;td&gt; 0.1752602  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;nox&lt;/th&gt;&lt;td&gt; 0.398736174&lt;/td&gt;&lt;td&gt; 0.42097171 &lt;/td&gt;&lt;td&gt;-0.51660371 &lt;/td&gt;&lt;td&gt; 0.76365145 &lt;/td&gt;&lt;td&gt; 0.091202807&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.30218819 &lt;/td&gt;&lt;td&gt; 0.73147010 &lt;/td&gt;&lt;td&gt;-0.76923011 &lt;/td&gt;&lt;td&gt; 0.611440563&lt;/td&gt;&lt;td&gt; 0.66802320 &lt;/td&gt;&lt;td&gt; 0.1889327  &lt;/td&gt;&lt;td&gt;-0.38005064 &lt;/td&gt;&lt;td&gt; 0.5908789  &lt;/td&gt;&lt;td&gt;-0.4273208  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;rm&lt;/th&gt;&lt;td&gt;-0.079971150&lt;/td&gt;&lt;td&gt;-0.21924670 &lt;/td&gt;&lt;td&gt; 0.31199059 &lt;/td&gt;&lt;td&gt;-0.39167585 &lt;/td&gt;&lt;td&gt; 0.091251225&lt;/td&gt;&lt;td&gt;-0.30218819 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.24026493 &lt;/td&gt;&lt;td&gt; 0.20524621 &lt;/td&gt;&lt;td&gt;-0.209846668&lt;/td&gt;&lt;td&gt;-0.29204783 &lt;/td&gt;&lt;td&gt;-0.3555015  &lt;/td&gt;&lt;td&gt; 0.12806864 &lt;/td&gt;&lt;td&gt;-0.6138083  &lt;/td&gt;&lt;td&gt; 0.6953599  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;age&lt;/th&gt;&lt;td&gt; 0.203783510&lt;/td&gt;&lt;td&gt; 0.35273425 &lt;/td&gt;&lt;td&gt;-0.56953734 &lt;/td&gt;&lt;td&gt; 0.64477851 &lt;/td&gt;&lt;td&gt; 0.086517774&lt;/td&gt;&lt;td&gt; 0.73147010 &lt;/td&gt;&lt;td&gt;-0.24026493 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.74788054 &lt;/td&gt;&lt;td&gt; 0.456022452&lt;/td&gt;&lt;td&gt; 0.50645559 &lt;/td&gt;&lt;td&gt; 0.2615150  &lt;/td&gt;&lt;td&gt;-0.27353398 &lt;/td&gt;&lt;td&gt; 0.6023385  &lt;/td&gt;&lt;td&gt;-0.3769546  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;dis&lt;/th&gt;&lt;td&gt;-0.302210959&lt;/td&gt;&lt;td&gt;-0.37967009 &lt;/td&gt;&lt;td&gt; 0.66440822 &lt;/td&gt;&lt;td&gt;-0.70802699 &lt;/td&gt;&lt;td&gt;-0.099175780&lt;/td&gt;&lt;td&gt;-0.76923011 &lt;/td&gt;&lt;td&gt; 0.20524621 &lt;/td&gt;&lt;td&gt;-0.74788054 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.494587930&lt;/td&gt;&lt;td&gt;-0.53443158 &lt;/td&gt;&lt;td&gt;-0.2324705  &lt;/td&gt;&lt;td&gt; 0.29151167 &lt;/td&gt;&lt;td&gt;-0.4969958  &lt;/td&gt;&lt;td&gt; 0.2499287  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;rad&lt;/th&gt;&lt;td&gt; 0.686001976&lt;/td&gt;&lt;td&gt; 0.62550515 &lt;/td&gt;&lt;td&gt;-0.31194783 &lt;/td&gt;&lt;td&gt; 0.59512927 &lt;/td&gt;&lt;td&gt;-0.007368241&lt;/td&gt;&lt;td&gt; 0.61144056 &lt;/td&gt;&lt;td&gt;-0.20984667 &lt;/td&gt;&lt;td&gt; 0.45602245 &lt;/td&gt;&lt;td&gt;-0.49458793 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.91022819 &lt;/td&gt;&lt;td&gt; 0.4647412  &lt;/td&gt;&lt;td&gt;-0.44441282 &lt;/td&gt;&lt;td&gt; 0.4886763  &lt;/td&gt;&lt;td&gt;-0.3816262  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;tax&lt;/th&gt;&lt;td&gt; 0.666625924&lt;/td&gt;&lt;td&gt; 0.58276431 &lt;/td&gt;&lt;td&gt;-0.31456332 &lt;/td&gt;&lt;td&gt; 0.72076018 &lt;/td&gt;&lt;td&gt;-0.035586518&lt;/td&gt;&lt;td&gt; 0.66802320 &lt;/td&gt;&lt;td&gt;-0.29204783 &lt;/td&gt;&lt;td&gt; 0.50645559 &lt;/td&gt;&lt;td&gt;-0.53443158 &lt;/td&gt;&lt;td&gt; 0.910228189&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.4608530  &lt;/td&gt;&lt;td&gt;-0.44180801 &lt;/td&gt;&lt;td&gt; 0.5439934  &lt;/td&gt;&lt;td&gt;-0.4685359  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;ptratio&lt;/th&gt;&lt;td&gt; 0.291074227&lt;/td&gt;&lt;td&gt; 0.28994558 &lt;/td&gt;&lt;td&gt;-0.39167855 &lt;/td&gt;&lt;td&gt; 0.38324756 &lt;/td&gt;&lt;td&gt;-0.121515174&lt;/td&gt;&lt;td&gt; 0.18893268 &lt;/td&gt;&lt;td&gt;-0.35550149 &lt;/td&gt;&lt;td&gt; 0.26151501 &lt;/td&gt;&lt;td&gt;-0.23247054 &lt;/td&gt;&lt;td&gt; 0.464741179&lt;/td&gt;&lt;td&gt; 0.46085304 &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;td&gt;-0.17738330 &lt;/td&gt;&lt;td&gt; 0.3740443  &lt;/td&gt;&lt;td&gt;-0.5077867  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;black&lt;/th&gt;&lt;td&gt;-0.295041232&lt;/td&gt;&lt;td&gt;-0.38506394 &lt;/td&gt;&lt;td&gt; 0.17552032 &lt;/td&gt;&lt;td&gt;-0.35697654 &lt;/td&gt;&lt;td&gt; 0.048788485&lt;/td&gt;&lt;td&gt;-0.38005064 &lt;/td&gt;&lt;td&gt; 0.12806864 &lt;/td&gt;&lt;td&gt;-0.27353398 &lt;/td&gt;&lt;td&gt; 0.29151167 &lt;/td&gt;&lt;td&gt;-0.444412816&lt;/td&gt;&lt;td&gt;-0.44180801 &lt;/td&gt;&lt;td&gt;-0.1773833  &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.3660869  &lt;/td&gt;&lt;td&gt; 0.3334608  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;lstat&lt;/th&gt;&lt;td&gt; 0.258464770&lt;/td&gt;&lt;td&gt; 0.45562148 &lt;/td&gt;&lt;td&gt;-0.41299457 &lt;/td&gt;&lt;td&gt; 0.60379972 &lt;/td&gt;&lt;td&gt;-0.053929298&lt;/td&gt;&lt;td&gt; 0.59087892 &lt;/td&gt;&lt;td&gt;-0.61380827 &lt;/td&gt;&lt;td&gt; 0.60233853 &lt;/td&gt;&lt;td&gt;-0.49699583 &lt;/td&gt;&lt;td&gt; 0.488676335&lt;/td&gt;&lt;td&gt; 0.54399341 &lt;/td&gt;&lt;td&gt; 0.3740443  &lt;/td&gt;&lt;td&gt;-0.36608690 &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;td&gt;-0.7376627  &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;medv&lt;/th&gt;&lt;td&gt;-0.226603643&lt;/td&gt;&lt;td&gt;-0.38830461 &lt;/td&gt;&lt;td&gt; 0.36044534 &lt;/td&gt;&lt;td&gt;-0.48372516 &lt;/td&gt;&lt;td&gt; 0.175260177&lt;/td&gt;&lt;td&gt;-0.42732077 &lt;/td&gt;&lt;td&gt; 0.69535995 &lt;/td&gt;&lt;td&gt;-0.37695457 &lt;/td&gt;&lt;td&gt; 0.24992873 &lt;/td&gt;&lt;td&gt;-0.381626231&lt;/td&gt;&lt;td&gt;-0.46853593 &lt;/td&gt;&lt;td&gt;-0.5077867  &lt;/td&gt;&lt;td&gt; 0.33346082 &lt;/td&gt;&lt;td&gt;-0.7376627  &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;X&lt;/th&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.40740717 &lt;/td&gt;&lt;td&gt;-0.10339336 &lt;/td&gt;&lt;td&gt; 0.39943885 &lt;/td&gt;&lt;td&gt;-0.003759115&lt;/td&gt;&lt;td&gt; 0.39873617 &lt;/td&gt;&lt;td&gt;-0.07997115 &lt;/td&gt;&lt;td&gt; 0.20378351 &lt;/td&gt;&lt;td&gt;-0.30221096 &lt;/td&gt;&lt;td&gt; 0.686001976&lt;/td&gt;&lt;td&gt; 0.66662592 &lt;/td&gt;&lt;td&gt; 0.2910742  &lt;/td&gt;&lt;td&gt;-0.29504123 &lt;/td&gt;&lt;td&gt; 0.2584648  &lt;/td&gt;&lt;td&gt;-0.2266036  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;crim&lt;/th&gt;&lt;td&gt; 0.407407172&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.20046922 &lt;/td&gt;&lt;td&gt; 0.40658341 &lt;/td&gt;&lt;td&gt;-0.055891582&lt;/td&gt;&lt;td&gt; 0.42097171 &lt;/td&gt;&lt;td&gt;-0.21924670 &lt;/td&gt;&lt;td&gt; 0.35273425 &lt;/td&gt;&lt;td&gt;-0.37967009 &lt;/td&gt;&lt;td&gt; 0.625505145&lt;/td&gt;&lt;td&gt; 0.58276431 &lt;/td&gt;&lt;td&gt; 0.2899456  &lt;/td&gt;&lt;td&gt;-0.38506394 &lt;/td&gt;&lt;td&gt; 0.4556215  &lt;/td&gt;&lt;td&gt;-0.3883046  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;zn&lt;/th&gt;&lt;td&gt;-0.103393357&lt;/td&gt;&lt;td&gt;-0.20046922 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.53382819 &lt;/td&gt;&lt;td&gt;-0.042696719&lt;/td&gt;&lt;td&gt;-0.51660371 &lt;/td&gt;&lt;td&gt; 0.31199059 &lt;/td&gt;&lt;td&gt;-0.56953734 &lt;/td&gt;&lt;td&gt; 0.66440822 &lt;/td&gt;&lt;td&gt;-0.311947826&lt;/td&gt;&lt;td&gt;-0.31456332 &lt;/td&gt;&lt;td&gt;-0.3916785  &lt;/td&gt;&lt;td&gt; 0.17552032 &lt;/td&gt;&lt;td&gt;-0.4129946  &lt;/td&gt;&lt;td&gt; 0.3604453  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;indus&lt;/th&gt;&lt;td&gt; 0.399438850&lt;/td&gt;&lt;td&gt; 0.40658341 &lt;/td&gt;&lt;td&gt;-0.53382819 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.062938027&lt;/td&gt;&lt;td&gt; 0.76365145 &lt;/td&gt;&lt;td&gt;-0.39167585 &lt;/td&gt;&lt;td&gt; 0.64477851 &lt;/td&gt;&lt;td&gt;-0.70802699 &lt;/td&gt;&lt;td&gt; 0.595129275&lt;/td&gt;&lt;td&gt; 0.72076018 &lt;/td&gt;&lt;td&gt; 0.3832476  &lt;/td&gt;&lt;td&gt;-0.35697654 &lt;/td&gt;&lt;td&gt; 0.6037997  &lt;/td&gt;&lt;td&gt;-0.4837252  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;chas&lt;/th&gt;&lt;td&gt;-0.003759115&lt;/td&gt;&lt;td&gt;-0.05589158 &lt;/td&gt;&lt;td&gt;-0.04269672 &lt;/td&gt;&lt;td&gt; 0.06293803 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.09120281 &lt;/td&gt;&lt;td&gt; 0.09125123 &lt;/td&gt;&lt;td&gt; 0.08651777 &lt;/td&gt;&lt;td&gt;-0.09917578 &lt;/td&gt;&lt;td&gt;-0.007368241&lt;/td&gt;&lt;td&gt;-0.03558652 &lt;/td&gt;&lt;td&gt;-0.1215152  &lt;/td&gt;&lt;td&gt; 0.04878848 &lt;/td&gt;&lt;td&gt;-0.0539293  &lt;/td&gt;&lt;td&gt; 0.1752602  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;nox&lt;/th&gt;&lt;td&gt; 0.398736174&lt;/td&gt;&lt;td&gt; 0.42097171 &lt;/td&gt;&lt;td&gt;-0.51660371 &lt;/td&gt;&lt;td&gt; 0.76365145 &lt;/td&gt;&lt;td&gt; 0.091202807&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.30218819 &lt;/td&gt;&lt;td&gt; 0.73147010 &lt;/td&gt;&lt;td&gt;-0.76923011 &lt;/td&gt;&lt;td&gt; 0.611440563&lt;/td&gt;&lt;td&gt; 0.66802320 &lt;/td&gt;&lt;td&gt; 0.1889327  &lt;/td&gt;&lt;td&gt;-0.38005064 &lt;/td&gt;&lt;td&gt; 0.5908789  &lt;/td&gt;&lt;td&gt;-0.4273208  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;rm&lt;/th&gt;&lt;td&gt;-0.079971150&lt;/td&gt;&lt;td&gt;-0.21924670 &lt;/td&gt;&lt;td&gt; 0.31199059 &lt;/td&gt;&lt;td&gt;-0.39167585 &lt;/td&gt;&lt;td&gt; 0.091251225&lt;/td&gt;&lt;td&gt;-0.30218819 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.24026493 &lt;/td&gt;&lt;td&gt; 0.20524621 &lt;/td&gt;&lt;td&gt;-0.209846668&lt;/td&gt;&lt;td&gt;-0.29204783 &lt;/td&gt;&lt;td&gt;-0.3555015  &lt;/td&gt;&lt;td&gt; 0.12806864 &lt;/td&gt;&lt;td&gt;-0.6138083  &lt;/td&gt;&lt;td&gt; 0.6953599  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;age&lt;/th&gt;&lt;td&gt; 0.203783510&lt;/td&gt;&lt;td&gt; 0.35273425 &lt;/td&gt;&lt;td&gt;-0.56953734 &lt;/td&gt;&lt;td&gt; 0.64477851 &lt;/td&gt;&lt;td&gt; 0.086517774&lt;/td&gt;&lt;td&gt; 0.73147010 &lt;/td&gt;&lt;td&gt;-0.24026493 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.74788054 &lt;/td&gt;&lt;td&gt; 0.456022452&lt;/td&gt;&lt;td&gt; 0.50645559 &lt;/td&gt;&lt;td&gt; 0.2615150  &lt;/td&gt;&lt;td&gt;-0.27353398 &lt;/td&gt;&lt;td&gt; 0.6023385  &lt;/td&gt;&lt;td&gt;-0.3769546  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;dis&lt;/th&gt;&lt;td&gt;-0.302210959&lt;/td&gt;&lt;td&gt;-0.37967009 &lt;/td&gt;&lt;td&gt; 0.66440822 &lt;/td&gt;&lt;td&gt;-0.70802699 &lt;/td&gt;&lt;td&gt;-0.099175780&lt;/td&gt;&lt;td&gt;-0.76923011 &lt;/td&gt;&lt;td&gt; 0.20524621 &lt;/td&gt;&lt;td&gt;-0.74788054 &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.494587930&lt;/td&gt;&lt;td&gt;-0.53443158 &lt;/td&gt;&lt;td&gt;-0.2324705  &lt;/td&gt;&lt;td&gt; 0.29151167 &lt;/td&gt;&lt;td&gt;-0.4969958  &lt;/td&gt;&lt;td&gt; 0.2499287  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;rad&lt;/th&gt;&lt;td&gt; 0.686001976&lt;/td&gt;&lt;td&gt; 0.62550515 &lt;/td&gt;&lt;td&gt;-0.31194783 &lt;/td&gt;&lt;td&gt; 0.59512927 &lt;/td&gt;&lt;td&gt;-0.007368241&lt;/td&gt;&lt;td&gt; 0.61144056 &lt;/td&gt;&lt;td&gt;-0.20984667 &lt;/td&gt;&lt;td&gt; 0.45602245 &lt;/td&gt;&lt;td&gt;-0.49458793 &lt;/td&gt;&lt;td&gt; 1.000000000&lt;/td&gt;&lt;td&gt; 0.91022819 &lt;/td&gt;&lt;td&gt; 0.4647412  &lt;/td&gt;&lt;td&gt;-0.44441282 &lt;/td&gt;&lt;td&gt; 0.4886763  &lt;/td&gt;&lt;td&gt;-0.3816262  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;tax&lt;/th&gt;&lt;td&gt; 0.666625924&lt;/td&gt;&lt;td&gt; 0.58276431 &lt;/td&gt;&lt;td&gt;-0.31456332 &lt;/td&gt;&lt;td&gt; 0.72076018 &lt;/td&gt;&lt;td&gt;-0.035586518&lt;/td&gt;&lt;td&gt; 0.66802320 &lt;/td&gt;&lt;td&gt;-0.29204783 &lt;/td&gt;&lt;td&gt; 0.50645559 &lt;/td&gt;&lt;td&gt;-0.53443158 &lt;/td&gt;&lt;td&gt; 0.910228189&lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt; 0.4608530  &lt;/td&gt;&lt;td&gt;-0.44180801 &lt;/td&gt;&lt;td&gt; 0.5439934  &lt;/td&gt;&lt;td&gt;-0.4685359  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;ptratio&lt;/th&gt;&lt;td&gt; 0.291074227&lt;/td&gt;&lt;td&gt; 0.28994558 &lt;/td&gt;&lt;td&gt;-0.39167855 &lt;/td&gt;&lt;td&gt; 0.38324756 &lt;/td&gt;&lt;td&gt;-0.121515174&lt;/td&gt;&lt;td&gt; 0.18893268 &lt;/td&gt;&lt;td&gt;-0.35550149 &lt;/td&gt;&lt;td&gt; 0.26151501 &lt;/td&gt;&lt;td&gt;-0.23247054 &lt;/td&gt;&lt;td&gt; 0.464741179&lt;/td&gt;&lt;td&gt; 0.46085304 &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;td&gt;-0.17738330 &lt;/td&gt;&lt;td&gt; 0.3740443  &lt;/td&gt;&lt;td&gt;-0.5077867  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;black&lt;/th&gt;&lt;td&gt;-0.295041232&lt;/td&gt;&lt;td&gt;-0.38506394 &lt;/td&gt;&lt;td&gt; 0.17552032 &lt;/td&gt;&lt;td&gt;-0.35697654 &lt;/td&gt;&lt;td&gt; 0.048788485&lt;/td&gt;&lt;td&gt;-0.38005064 &lt;/td&gt;&lt;td&gt; 0.12806864 &lt;/td&gt;&lt;td&gt;-0.27353398 &lt;/td&gt;&lt;td&gt; 0.29151167 &lt;/td&gt;&lt;td&gt;-0.444412816&lt;/td&gt;&lt;td&gt;-0.44180801 &lt;/td&gt;&lt;td&gt;-0.1773833  &lt;/td&gt;&lt;td&gt; 1.00000000 &lt;/td&gt;&lt;td&gt;-0.3660869  &lt;/td&gt;&lt;td&gt; 0.3334608  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;lstat&lt;/th&gt;&lt;td&gt; 0.258464770&lt;/td&gt;&lt;td&gt; 0.45562148 &lt;/td&gt;&lt;td&gt;-0.41299457 &lt;/td&gt;&lt;td&gt; 0.60379972 &lt;/td&gt;&lt;td&gt;-0.053929298&lt;/td&gt;&lt;td&gt; 0.59087892 &lt;/td&gt;&lt;td&gt;-0.61380827 &lt;/td&gt;&lt;td&gt; 0.60233853 &lt;/td&gt;&lt;td&gt;-0.49699583 &lt;/td&gt;&lt;td&gt; 0.488676335&lt;/td&gt;&lt;td&gt; 0.54399341 &lt;/td&gt;&lt;td&gt; 0.3740443  &lt;/td&gt;&lt;td&gt;-0.36608690 &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;td&gt;-0.7376627  &lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;medv&lt;/th&gt;&lt;td&gt;-0.226603643&lt;/td&gt;&lt;td&gt;-0.38830461 &lt;/td&gt;&lt;td&gt; 0.36044534 &lt;/td&gt;&lt;td&gt;-0.48372516 &lt;/td&gt;&lt;td&gt; 0.175260177&lt;/td&gt;&lt;td&gt;-0.42732077 &lt;/td&gt;&lt;td&gt; 0.69535995 &lt;/td&gt;&lt;td&gt;-0.37695457 &lt;/td&gt;&lt;td&gt; 0.24992873 &lt;/td&gt;&lt;td&gt;-0.381626231&lt;/td&gt;&lt;td&gt;-0.46853593 &lt;/td&gt;&lt;td&gt;-0.5077867  &lt;/td&gt;&lt;td&gt; 0.33346082 &lt;/td&gt;&lt;td&gt;-0.7376627  &lt;/td&gt;&lt;td&gt; 1.0000000  &lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cor&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea "&gt;
 &lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th scope="col"&gt;medv&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;&lt;th scope="row"&gt;rm&lt;/th&gt;&lt;td&gt;0.6953599&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th scope="row"&gt;rm&lt;/th&gt;&lt;td&gt;0.6953599&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Plotting"&gt;Plotting&lt;a class="anchor-link" href="#Plotting"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="Plotting"&gt;Plotting&lt;a class="anchor-link" href="#Plotting"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -5058,29 +5121,41 @@ CEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAA
 AQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQg
 AAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAE
 IAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAA
-BCAAAQhAAAIQgAAEIAABCPQKgf8H3VjtkgIQFEsAAAAASUVORK5CYII=" /&gt;
+BCAAAQhAAAIQgAAEIAABCPQKgf8H3VjtkgIQFEsAAAAASUVORK5CYII="&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hist&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"crim"&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; breaks &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
-     main &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"Histogram of Crime Rate"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-     xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"Per-capita-crime-rate-by-town"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-     ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"Frequency"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hist&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;crim&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; breaks &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+     main &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Histogram of Crime Rate&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Per-capita-crime-rate-by-town&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Frequency&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -5712,26 +5787,38 @@ CCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAA
 AggggAACCCCAAAIILGgk+QAAAItJREFUIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAII
 IIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAAC
 CCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCHSMwP8BiuU3
-lde/DN8AAAAASUVORK5CYII=" /&gt;
+lde/DN8AAAAASUVORK5CYII="&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[9]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"zn"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"indus"&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"zn"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"indus"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zn&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;indus&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;zn&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;indus&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -6377,26 +6464,38 @@ BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAjsiMD/Az+DicxAsxwyAAAAAElFTkSuQmCC
-" /&gt;
+"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[10]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -7948,57 +8047,73 @@ FFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEAB
 BRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBA
 AQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQ
 QAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUU
-UEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQWaJfA/dL8vKB1sHo0AAAAASUVORK5CYII=" /&gt;
+UEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQWaJfA/dL8vKB1sHo0AAAAASUVORK5CYII="&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Linear-Regression"&gt;Linear Regression&lt;a class="anchor-link" href="#Linear-Regression"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Linear-Regression"&gt;Linear Regression&lt;a class="anchor-link" href="#Linear-Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[11]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-y &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[12]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fit &lt;span class="o"&gt;&lt;-&lt;/span&gt; lm&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;~&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fit &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; lm&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;~&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[13]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;fit&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea "&gt;
 &lt;pre&gt;
 Call:
@@ -8009,36 +8124,48 @@ Residuals:
 -23.346  -2.547   0.090   2.986  39.433 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  -34.671      2.650  -13.08   &lt;2e-16 ***
-x              9.102      0.419   21.72   &lt;2e-16 ***
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  -34.671      2.650  -13.08   &amp;lt;2e-16 ***
+x              9.102      0.419   21.72   &amp;lt;2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 6.616 on 504 degrees of freedom
 Multiple R-squared:  0.4835,	Adjusted R-squared:  0.4825 
-F-statistic: 471.8 on 1 and 504 DF,  p-value: &lt; 2.2e-16
+F-statistic: 471.8 on 1 and 504 DF,  p-value: &amp;lt; 2.2e-16
 &lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[14]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 abline&lt;span class="p"&gt;(&lt;/span&gt;fit&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -9661,79 +9788,93 @@ DWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSg
 AQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0
 oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAG
 NKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCA
-BjSgAQ3Uy8D/B8Us4QA1/iBEAAAAAElFTkSuQmCC" /&gt;
+BjSgAQ3Uy8D/B8Us4QA1/iBEAAAAAElFTkSuQmCC"&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Multiple-Regression-Analysis"&gt;Multiple Regression Analysis&lt;a class="anchor-link" href="#Multiple-Regression-Analysis"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;crim &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"crim"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-zn &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"zn"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-indus &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"indus"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-chas &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"chas"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-nox &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"nox"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-rm &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"rm"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-age &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"age"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-dis &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"dis"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-rad &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"rad"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-tax &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"tax"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-ptratio &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"ptratio"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-black &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-lstat &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"lstat"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-medv &lt;span class="o"&gt;&lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"medv"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 
-y &lt;span class="o"&gt;&lt;-&lt;/span&gt; medv
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fit &lt;span class="o"&gt;&lt;-&lt;/span&gt; lm&lt;span class="p"&gt;(&lt;/span&gt;y &lt;span class="o"&gt;~&lt;/span&gt; crim &lt;span class="o"&gt;+&lt;/span&gt; zn &lt;span class="o"&gt;+&lt;/span&gt; indus &lt;span class="o"&gt;+&lt;/span&gt; chas &lt;span class="o"&gt;+&lt;/span&gt; nox &lt;span class="o"&gt;+&lt;/span&gt; rm &lt;span class="o"&gt;+&lt;/span&gt; age &lt;span class="o"&gt;+&lt;/span&gt; dis &lt;span class="o"&gt;+&lt;/span&gt; rad &lt;span class="o"&gt;+&lt;/span&gt; tax &lt;span class="o"&gt;+&lt;/span&gt; ptratio &lt;span class="o"&gt;+&lt;/span&gt; black &lt;span class="o"&gt;+&lt;/span&gt; lstat&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Step-wise-Selection"&gt;Step-wise Selection&lt;a class="anchor-link" href="#Step-wise-Selection"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Multiple-Regression-Analysis"&gt;Multiple Regression Analysis&lt;a class="anchor-link" href="#Multiple-Regression-Analysis"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[15]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;result &lt;span class="o"&gt;&lt;-&lt;/span&gt; step&lt;span class="p"&gt;(&lt;/span&gt;fit&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;crim &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;crim&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+zn &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zn&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+indus &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;indus&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+chas &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;chas&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+nox &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;nox&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+rm &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+age &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;age&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+dis &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;dis&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+rad &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rad&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+tax &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tax&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+ptratio &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ptratio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+black &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+lstat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;lstat&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+medv &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;data.matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;medv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; medv
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[16]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fit &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; lm&lt;span class="p"&gt;(&lt;/span&gt;y &lt;span class="o"&gt;~&lt;/span&gt; crim &lt;span class="o"&gt;+&lt;/span&gt; zn &lt;span class="o"&gt;+&lt;/span&gt; indus &lt;span class="o"&gt;+&lt;/span&gt; chas &lt;span class="o"&gt;+&lt;/span&gt; nox &lt;span class="o"&gt;+&lt;/span&gt; rm &lt;span class="o"&gt;+&lt;/span&gt; age &lt;span class="o"&gt;+&lt;/span&gt; dis &lt;span class="o"&gt;+&lt;/span&gt; rad &lt;span class="o"&gt;+&lt;/span&gt; tax &lt;span class="o"&gt;+&lt;/span&gt; ptratio &lt;span class="o"&gt;+&lt;/span&gt; black &lt;span class="o"&gt;+&lt;/span&gt; lstat&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Step-wise-Selection"&gt;Step-wise Selection&lt;a class="anchor-link" href="#Step-wise-Selection"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[17]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;result &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; step&lt;span class="p"&gt;(&lt;/span&gt;fit&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Start:  AIC=1589.64
 y ~ crim + zn + indus + chas + nox + rm + age + dis + rad + tax + 
@@ -9742,7 +9883,7 @@ y ~ crim + zn + indus + chas + nox + rm + age + dis + rad + tax +
           Df Sum of Sq   RSS    AIC
 - age      1      0.06 11079 1587.7
 - indus    1      2.52 11081 1587.8
-&lt;none&gt;                 11079 1589.6
+&amp;lt;none&amp;gt;                 11079 1589.6
 - chas     1    218.97 11298 1597.5
 - tax      1    242.26 11321 1598.6
 - crim     1    243.22 11322 1598.6
@@ -9761,7 +9902,7 @@ y ~ crim + zn + indus + chas + nox + rm + dis + rad + tax + ptratio +
 
           Df Sum of Sq   RSS    AIC
 - indus    1      2.52 11081 1585.8
-&lt;none&gt;                 11079 1587.7
+&amp;lt;none&amp;gt;                 11079 1587.7
 - chas     1    219.91 11299 1595.6
 - tax      1    242.24 11321 1596.6
 - crim     1    243.20 11322 1596.6
@@ -9779,7 +9920,7 @@ y ~ crim + zn + chas + nox + rm + dis + rad + tax + ptratio +
     black + lstat
 
           Df Sum of Sq   RSS    AIC
-&lt;none&gt;                 11081 1585.8
+&amp;lt;none&amp;gt;                 11081 1585.8
 - chas     1    227.21 11309 1594.0
 - crim     1    245.37 11327 1594.8
 - zn       1    257.82 11339 1595.4
@@ -9794,23 +9935,34 @@ y ~ crim + zn + chas + nox + rm + dis + rad + tax + ptratio +
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [18]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[18]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-r"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;result&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea "&gt;
 &lt;pre&gt;
 Call:
@@ -9822,39 +9974,45 @@ Residuals:
 -15.5984  -2.7386  -0.5046   1.7273  26.2373 
 
 Coefficients:
-              Estimate Std. Error t value Pr(&gt;|t|)    
+              Estimate Std. Error t value Pr(&amp;gt;|t|)    
 (Intercept)  36.341145   5.067492   7.171 2.73e-12 ***
 crim         -0.108413   0.032779  -3.307 0.001010 ** 
 zn            0.045845   0.013523   3.390 0.000754 ***
 chas          2.718716   0.854240   3.183 0.001551 ** 
 nox         -17.376023   3.535243  -4.915 1.21e-06 ***
-rm            3.801579   0.406316   9.356  &lt; 2e-16 ***
+rm            3.801579   0.406316   9.356  &amp;lt; 2e-16 ***
 dis          -1.492711   0.185731  -8.037 6.84e-15 ***
 rad           0.299608   0.063402   4.726 3.00e-06 ***
 tax          -0.011778   0.003372  -3.493 0.000521 ***
 ptratio      -0.946525   0.129066  -7.334 9.24e-13 ***
 black         0.009291   0.002674   3.475 0.000557 ***
-lstat        -0.522553   0.047424 -11.019  &lt; 2e-16 ***
+lstat        -0.522553   0.047424 -11.019  &amp;lt; 2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 4.736 on 494 degrees of freedom
 Multiple R-squared:  0.7406,	Adjusted R-squared:  0.7348 
-F-statistic: 128.2 on 11 and 494 DF,  p-value: &lt; 2.2e-16
+F-statistic: 128.2 on 11 and 494 DF,  p-value: &amp;lt; 2.2e-16
 &lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+ 
+
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -9889,7 +10047,7 @@ F-statistic: 128.2 on 11 and 494 DF,  p-value: &lt; 2.2e-16
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
@@ -9898,6 +10056,7 @@ F-statistic: 128.2 on 11 and 494 DF,  p-value: &lt; 2.2e-16
 &lt;li&gt;&lt;a href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://seaborn.pydata.org/"&gt;seaborn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -10878,7 +11037,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
+&lt;h2 id="Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;Linear regression of Boston Housing Dataset using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-PyData"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
@@ -10887,14 +11046,15 @@ h6:hover .anchor-link {
 &lt;li&gt;&lt;a href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://seaborn.pydata.org/"&gt;seaborn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sp&lt;/span&gt;
@@ -10904,47 +11064,60 @@ h6:hover .anchor-link {
 
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv'&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
-&lt;style scoped=""&gt;
+&lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -10958,150 +11131,161 @@ h6:hover .anchor-link {
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;0&lt;/th&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;0.00632&lt;/td&gt;
-&lt;td&gt;18.0&lt;/td&gt;
-&lt;td&gt;2.31&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.538&lt;/td&gt;
-&lt;td&gt;6.575&lt;/td&gt;
-&lt;td&gt;65.2&lt;/td&gt;
-&lt;td&gt;4.0900&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;296&lt;/td&gt;
-&lt;td&gt;15.3&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;4.98&lt;/td&gt;
-&lt;td&gt;24.0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;1&lt;/th&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;0.02731&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;7.07&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.469&lt;/td&gt;
-&lt;td&gt;6.421&lt;/td&gt;
-&lt;td&gt;78.9&lt;/td&gt;
-&lt;td&gt;4.9671&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;242&lt;/td&gt;
-&lt;td&gt;17.8&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;9.14&lt;/td&gt;
-&lt;td&gt;21.6&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;2&lt;/th&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;0.02729&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;7.07&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.469&lt;/td&gt;
-&lt;td&gt;7.185&lt;/td&gt;
-&lt;td&gt;61.1&lt;/td&gt;
-&lt;td&gt;4.9671&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;242&lt;/td&gt;
-&lt;td&gt;17.8&lt;/td&gt;
-&lt;td&gt;392.83&lt;/td&gt;
-&lt;td&gt;4.03&lt;/td&gt;
-&lt;td&gt;34.7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;3&lt;/th&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;0.03237&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;2.18&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.458&lt;/td&gt;
-&lt;td&gt;6.998&lt;/td&gt;
-&lt;td&gt;45.8&lt;/td&gt;
-&lt;td&gt;6.0622&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;222&lt;/td&gt;
-&lt;td&gt;18.7&lt;/td&gt;
-&lt;td&gt;394.63&lt;/td&gt;
-&lt;td&gt;2.94&lt;/td&gt;
-&lt;td&gt;33.4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;4&lt;/th&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;0.06905&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;2.18&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.458&lt;/td&gt;
-&lt;td&gt;7.147&lt;/td&gt;
-&lt;td&gt;54.2&lt;/td&gt;
-&lt;td&gt;6.0622&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;222&lt;/td&gt;
-&lt;td&gt;18.7&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;5.33&lt;/td&gt;
-&lt;td&gt;36.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;crim&lt;/th&gt;
+      &lt;th&gt;zn&lt;/th&gt;
+      &lt;th&gt;indus&lt;/th&gt;
+      &lt;th&gt;chas&lt;/th&gt;
+      &lt;th&gt;nox&lt;/th&gt;
+      &lt;th&gt;rm&lt;/th&gt;
+      &lt;th&gt;age&lt;/th&gt;
+      &lt;th&gt;dis&lt;/th&gt;
+      &lt;th&gt;rad&lt;/th&gt;
+      &lt;th&gt;tax&lt;/th&gt;
+      &lt;th&gt;ptratio&lt;/th&gt;
+      &lt;th&gt;black&lt;/th&gt;
+      &lt;th&gt;lstat&lt;/th&gt;
+      &lt;th&gt;medv&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0.00632&lt;/td&gt;
+      &lt;td&gt;18.0&lt;/td&gt;
+      &lt;td&gt;2.31&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.538&lt;/td&gt;
+      &lt;td&gt;6.575&lt;/td&gt;
+      &lt;td&gt;65.2&lt;/td&gt;
+      &lt;td&gt;4.0900&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;296&lt;/td&gt;
+      &lt;td&gt;15.3&lt;/td&gt;
+      &lt;td&gt;396.90&lt;/td&gt;
+      &lt;td&gt;4.98&lt;/td&gt;
+      &lt;td&gt;24.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;0.02731&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;7.07&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.469&lt;/td&gt;
+      &lt;td&gt;6.421&lt;/td&gt;
+      &lt;td&gt;78.9&lt;/td&gt;
+      &lt;td&gt;4.9671&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;242&lt;/td&gt;
+      &lt;td&gt;17.8&lt;/td&gt;
+      &lt;td&gt;396.90&lt;/td&gt;
+      &lt;td&gt;9.14&lt;/td&gt;
+      &lt;td&gt;21.6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;0.02729&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;7.07&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.469&lt;/td&gt;
+      &lt;td&gt;7.185&lt;/td&gt;
+      &lt;td&gt;61.1&lt;/td&gt;
+      &lt;td&gt;4.9671&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;242&lt;/td&gt;
+      &lt;td&gt;17.8&lt;/td&gt;
+      &lt;td&gt;392.83&lt;/td&gt;
+      &lt;td&gt;4.03&lt;/td&gt;
+      &lt;td&gt;34.7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;0.03237&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;2.18&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.458&lt;/td&gt;
+      &lt;td&gt;6.998&lt;/td&gt;
+      &lt;td&gt;45.8&lt;/td&gt;
+      &lt;td&gt;6.0622&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;222&lt;/td&gt;
+      &lt;td&gt;18.7&lt;/td&gt;
+      &lt;td&gt;394.63&lt;/td&gt;
+      &lt;td&gt;2.94&lt;/td&gt;
+      &lt;td&gt;33.4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;0.06905&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;2.18&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.458&lt;/td&gt;
+      &lt;td&gt;7.147&lt;/td&gt;
+      &lt;td&gt;54.2&lt;/td&gt;
+      &lt;td&gt;6.0622&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;222&lt;/td&gt;
+      &lt;td&gt;18.7&lt;/td&gt;
+      &lt;td&gt;396.90&lt;/td&gt;
+      &lt;td&gt;5.33&lt;/td&gt;
+      &lt;td&gt;36.2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Sampling-Statistic"&gt;Sampling Statistic&lt;a class="anchor-link" href="#Sampling-Statistic"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Sampling-Statistic"&gt;Sampling Statistic&lt;a class="anchor-link" href="#Sampling-Statistic"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
-&lt;style scoped=""&gt;
+&lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -11115,204 +11299,215 @@ h6:hover .anchor-link {
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;count&lt;/th&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;mean&lt;/th&gt;
-&lt;td&gt;253.500000&lt;/td&gt;
-&lt;td&gt;3.613524&lt;/td&gt;
-&lt;td&gt;11.363636&lt;/td&gt;
-&lt;td&gt;11.136779&lt;/td&gt;
-&lt;td&gt;0.069170&lt;/td&gt;
-&lt;td&gt;0.554695&lt;/td&gt;
-&lt;td&gt;6.284634&lt;/td&gt;
-&lt;td&gt;68.574901&lt;/td&gt;
-&lt;td&gt;3.795043&lt;/td&gt;
-&lt;td&gt;9.549407&lt;/td&gt;
-&lt;td&gt;408.237154&lt;/td&gt;
-&lt;td&gt;18.455534&lt;/td&gt;
-&lt;td&gt;356.674032&lt;/td&gt;
-&lt;td&gt;12.653063&lt;/td&gt;
-&lt;td&gt;22.532806&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;std&lt;/th&gt;
-&lt;td&gt;146.213884&lt;/td&gt;
-&lt;td&gt;8.601545&lt;/td&gt;
-&lt;td&gt;23.322453&lt;/td&gt;
-&lt;td&gt;6.860353&lt;/td&gt;
-&lt;td&gt;0.253994&lt;/td&gt;
-&lt;td&gt;0.115878&lt;/td&gt;
-&lt;td&gt;0.702617&lt;/td&gt;
-&lt;td&gt;28.148861&lt;/td&gt;
-&lt;td&gt;2.105710&lt;/td&gt;
-&lt;td&gt;8.707259&lt;/td&gt;
-&lt;td&gt;168.537116&lt;/td&gt;
-&lt;td&gt;2.164946&lt;/td&gt;
-&lt;td&gt;91.294864&lt;/td&gt;
-&lt;td&gt;7.141062&lt;/td&gt;
-&lt;td&gt;9.197104&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;min&lt;/th&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.006320&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.460000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.385000&lt;/td&gt;
-&lt;td&gt;3.561000&lt;/td&gt;
-&lt;td&gt;2.900000&lt;/td&gt;
-&lt;td&gt;1.129600&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;187.000000&lt;/td&gt;
-&lt;td&gt;12.600000&lt;/td&gt;
-&lt;td&gt;0.320000&lt;/td&gt;
-&lt;td&gt;1.730000&lt;/td&gt;
-&lt;td&gt;5.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;25%&lt;/th&gt;
-&lt;td&gt;127.250000&lt;/td&gt;
-&lt;td&gt;0.082045&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;5.190000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.449000&lt;/td&gt;
-&lt;td&gt;5.885500&lt;/td&gt;
-&lt;td&gt;45.025000&lt;/td&gt;
-&lt;td&gt;2.100175&lt;/td&gt;
-&lt;td&gt;4.000000&lt;/td&gt;
-&lt;td&gt;279.000000&lt;/td&gt;
-&lt;td&gt;17.400000&lt;/td&gt;
-&lt;td&gt;375.377500&lt;/td&gt;
-&lt;td&gt;6.950000&lt;/td&gt;
-&lt;td&gt;17.025000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;50%&lt;/th&gt;
-&lt;td&gt;253.500000&lt;/td&gt;
-&lt;td&gt;0.256510&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;9.690000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.538000&lt;/td&gt;
-&lt;td&gt;6.208500&lt;/td&gt;
-&lt;td&gt;77.500000&lt;/td&gt;
-&lt;td&gt;3.207450&lt;/td&gt;
-&lt;td&gt;5.000000&lt;/td&gt;
-&lt;td&gt;330.000000&lt;/td&gt;
-&lt;td&gt;19.050000&lt;/td&gt;
-&lt;td&gt;391.440000&lt;/td&gt;
-&lt;td&gt;11.360000&lt;/td&gt;
-&lt;td&gt;21.200000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;75%&lt;/th&gt;
-&lt;td&gt;379.750000&lt;/td&gt;
-&lt;td&gt;3.677082&lt;/td&gt;
-&lt;td&gt;12.500000&lt;/td&gt;
-&lt;td&gt;18.100000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.624000&lt;/td&gt;
-&lt;td&gt;6.623500&lt;/td&gt;
-&lt;td&gt;94.075000&lt;/td&gt;
-&lt;td&gt;5.188425&lt;/td&gt;
-&lt;td&gt;24.000000&lt;/td&gt;
-&lt;td&gt;666.000000&lt;/td&gt;
-&lt;td&gt;20.200000&lt;/td&gt;
-&lt;td&gt;396.225000&lt;/td&gt;
-&lt;td&gt;16.955000&lt;/td&gt;
-&lt;td&gt;25.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;max&lt;/th&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;88.976200&lt;/td&gt;
-&lt;td&gt;100.000000&lt;/td&gt;
-&lt;td&gt;27.740000&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.871000&lt;/td&gt;
-&lt;td&gt;8.780000&lt;/td&gt;
-&lt;td&gt;100.000000&lt;/td&gt;
-&lt;td&gt;12.126500&lt;/td&gt;
-&lt;td&gt;24.000000&lt;/td&gt;
-&lt;td&gt;711.000000&lt;/td&gt;
-&lt;td&gt;22.000000&lt;/td&gt;
-&lt;td&gt;396.900000&lt;/td&gt;
-&lt;td&gt;37.970000&lt;/td&gt;
-&lt;td&gt;50.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;crim&lt;/th&gt;
+      &lt;th&gt;zn&lt;/th&gt;
+      &lt;th&gt;indus&lt;/th&gt;
+      &lt;th&gt;chas&lt;/th&gt;
+      &lt;th&gt;nox&lt;/th&gt;
+      &lt;th&gt;rm&lt;/th&gt;
+      &lt;th&gt;age&lt;/th&gt;
+      &lt;th&gt;dis&lt;/th&gt;
+      &lt;th&gt;rad&lt;/th&gt;
+      &lt;th&gt;tax&lt;/th&gt;
+      &lt;th&gt;ptratio&lt;/th&gt;
+      &lt;th&gt;black&lt;/th&gt;
+      &lt;th&gt;lstat&lt;/th&gt;
+      &lt;th&gt;medv&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;count&lt;/th&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;mean&lt;/th&gt;
+      &lt;td&gt;253.500000&lt;/td&gt;
+      &lt;td&gt;3.613524&lt;/td&gt;
+      &lt;td&gt;11.363636&lt;/td&gt;
+      &lt;td&gt;11.136779&lt;/td&gt;
+      &lt;td&gt;0.069170&lt;/td&gt;
+      &lt;td&gt;0.554695&lt;/td&gt;
+      &lt;td&gt;6.284634&lt;/td&gt;
+      &lt;td&gt;68.574901&lt;/td&gt;
+      &lt;td&gt;3.795043&lt;/td&gt;
+      &lt;td&gt;9.549407&lt;/td&gt;
+      &lt;td&gt;408.237154&lt;/td&gt;
+      &lt;td&gt;18.455534&lt;/td&gt;
+      &lt;td&gt;356.674032&lt;/td&gt;
+      &lt;td&gt;12.653063&lt;/td&gt;
+      &lt;td&gt;22.532806&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;std&lt;/th&gt;
+      &lt;td&gt;146.213884&lt;/td&gt;
+      &lt;td&gt;8.601545&lt;/td&gt;
+      &lt;td&gt;23.322453&lt;/td&gt;
+      &lt;td&gt;6.860353&lt;/td&gt;
+      &lt;td&gt;0.253994&lt;/td&gt;
+      &lt;td&gt;0.115878&lt;/td&gt;
+      &lt;td&gt;0.702617&lt;/td&gt;
+      &lt;td&gt;28.148861&lt;/td&gt;
+      &lt;td&gt;2.105710&lt;/td&gt;
+      &lt;td&gt;8.707259&lt;/td&gt;
+      &lt;td&gt;168.537116&lt;/td&gt;
+      &lt;td&gt;2.164946&lt;/td&gt;
+      &lt;td&gt;91.294864&lt;/td&gt;
+      &lt;td&gt;7.141062&lt;/td&gt;
+      &lt;td&gt;9.197104&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;min&lt;/th&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.006320&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;0.460000&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;0.385000&lt;/td&gt;
+      &lt;td&gt;3.561000&lt;/td&gt;
+      &lt;td&gt;2.900000&lt;/td&gt;
+      &lt;td&gt;1.129600&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;187.000000&lt;/td&gt;
+      &lt;td&gt;12.600000&lt;/td&gt;
+      &lt;td&gt;0.320000&lt;/td&gt;
+      &lt;td&gt;1.730000&lt;/td&gt;
+      &lt;td&gt;5.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;25%&lt;/th&gt;
+      &lt;td&gt;127.250000&lt;/td&gt;
+      &lt;td&gt;0.082045&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;5.190000&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;0.449000&lt;/td&gt;
+      &lt;td&gt;5.885500&lt;/td&gt;
+      &lt;td&gt;45.025000&lt;/td&gt;
+      &lt;td&gt;2.100175&lt;/td&gt;
+      &lt;td&gt;4.000000&lt;/td&gt;
+      &lt;td&gt;279.000000&lt;/td&gt;
+      &lt;td&gt;17.400000&lt;/td&gt;
+      &lt;td&gt;375.377500&lt;/td&gt;
+      &lt;td&gt;6.950000&lt;/td&gt;
+      &lt;td&gt;17.025000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;50%&lt;/th&gt;
+      &lt;td&gt;253.500000&lt;/td&gt;
+      &lt;td&gt;0.256510&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;9.690000&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;0.538000&lt;/td&gt;
+      &lt;td&gt;6.208500&lt;/td&gt;
+      &lt;td&gt;77.500000&lt;/td&gt;
+      &lt;td&gt;3.207450&lt;/td&gt;
+      &lt;td&gt;5.000000&lt;/td&gt;
+      &lt;td&gt;330.000000&lt;/td&gt;
+      &lt;td&gt;19.050000&lt;/td&gt;
+      &lt;td&gt;391.440000&lt;/td&gt;
+      &lt;td&gt;11.360000&lt;/td&gt;
+      &lt;td&gt;21.200000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;75%&lt;/th&gt;
+      &lt;td&gt;379.750000&lt;/td&gt;
+      &lt;td&gt;3.677082&lt;/td&gt;
+      &lt;td&gt;12.500000&lt;/td&gt;
+      &lt;td&gt;18.100000&lt;/td&gt;
+      &lt;td&gt;0.000000&lt;/td&gt;
+      &lt;td&gt;0.624000&lt;/td&gt;
+      &lt;td&gt;6.623500&lt;/td&gt;
+      &lt;td&gt;94.075000&lt;/td&gt;
+      &lt;td&gt;5.188425&lt;/td&gt;
+      &lt;td&gt;24.000000&lt;/td&gt;
+      &lt;td&gt;666.000000&lt;/td&gt;
+      &lt;td&gt;20.200000&lt;/td&gt;
+      &lt;td&gt;396.225000&lt;/td&gt;
+      &lt;td&gt;16.955000&lt;/td&gt;
+      &lt;td&gt;25.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;max&lt;/th&gt;
+      &lt;td&gt;506.000000&lt;/td&gt;
+      &lt;td&gt;88.976200&lt;/td&gt;
+      &lt;td&gt;100.000000&lt;/td&gt;
+      &lt;td&gt;27.740000&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.871000&lt;/td&gt;
+      &lt;td&gt;8.780000&lt;/td&gt;
+      &lt;td&gt;100.000000&lt;/td&gt;
+      &lt;td&gt;12.126500&lt;/td&gt;
+      &lt;td&gt;24.000000&lt;/td&gt;
+      &lt;td&gt;711.000000&lt;/td&gt;
+      &lt;td&gt;22.000000&lt;/td&gt;
+      &lt;td&gt;396.900000&lt;/td&gt;
+      &lt;td&gt;37.970000&lt;/td&gt;
+      &lt;td&gt;50.000000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Correlation-coefficient"&gt;Correlation coefficient&lt;a class="anchor-link" href="#Correlation-coefficient"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Correlation-coefficient"&gt;Correlation coefficient&lt;a class="anchor-link" href="#Correlation-coefficient"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;corr&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
-&lt;style scoped=""&gt;
+&lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -11326,352 +11521,376 @@ h6:hover .anchor-link {
     }
 &lt;/style&gt;
 &lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.407407&lt;/td&gt;
-&lt;td&gt;-0.103393&lt;/td&gt;
-&lt;td&gt;0.399439&lt;/td&gt;
-&lt;td&gt;-0.003759&lt;/td&gt;
-&lt;td&gt;0.398736&lt;/td&gt;
-&lt;td&gt;-0.079971&lt;/td&gt;
-&lt;td&gt;0.203784&lt;/td&gt;
-&lt;td&gt;-0.302211&lt;/td&gt;
-&lt;td&gt;0.686002&lt;/td&gt;
-&lt;td&gt;0.666626&lt;/td&gt;
-&lt;td&gt;0.291074&lt;/td&gt;
-&lt;td&gt;-0.295041&lt;/td&gt;
-&lt;td&gt;0.258465&lt;/td&gt;
-&lt;td&gt;-0.226604&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;td&gt;0.407407&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.200469&lt;/td&gt;
-&lt;td&gt;0.406583&lt;/td&gt;
-&lt;td&gt;-0.055892&lt;/td&gt;
-&lt;td&gt;0.420972&lt;/td&gt;
-&lt;td&gt;-0.219247&lt;/td&gt;
-&lt;td&gt;0.352734&lt;/td&gt;
-&lt;td&gt;-0.379670&lt;/td&gt;
-&lt;td&gt;0.625505&lt;/td&gt;
-&lt;td&gt;0.582764&lt;/td&gt;
-&lt;td&gt;0.289946&lt;/td&gt;
-&lt;td&gt;-0.385064&lt;/td&gt;
-&lt;td&gt;0.455621&lt;/td&gt;
-&lt;td&gt;-0.388305&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;td&gt;-0.103393&lt;/td&gt;
-&lt;td&gt;-0.200469&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.533828&lt;/td&gt;
-&lt;td&gt;-0.042697&lt;/td&gt;
-&lt;td&gt;-0.516604&lt;/td&gt;
-&lt;td&gt;0.311991&lt;/td&gt;
-&lt;td&gt;-0.569537&lt;/td&gt;
-&lt;td&gt;0.664408&lt;/td&gt;
-&lt;td&gt;-0.311948&lt;/td&gt;
-&lt;td&gt;-0.314563&lt;/td&gt;
-&lt;td&gt;-0.391679&lt;/td&gt;
-&lt;td&gt;0.175520&lt;/td&gt;
-&lt;td&gt;-0.412995&lt;/td&gt;
-&lt;td&gt;0.360445&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;td&gt;0.399439&lt;/td&gt;
-&lt;td&gt;0.406583&lt;/td&gt;
-&lt;td&gt;-0.533828&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.062938&lt;/td&gt;
-&lt;td&gt;0.763651&lt;/td&gt;
-&lt;td&gt;-0.391676&lt;/td&gt;
-&lt;td&gt;0.644779&lt;/td&gt;
-&lt;td&gt;-0.708027&lt;/td&gt;
-&lt;td&gt;0.595129&lt;/td&gt;
-&lt;td&gt;0.720760&lt;/td&gt;
-&lt;td&gt;0.383248&lt;/td&gt;
-&lt;td&gt;-0.356977&lt;/td&gt;
-&lt;td&gt;0.603800&lt;/td&gt;
-&lt;td&gt;-0.483725&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;td&gt;-0.003759&lt;/td&gt;
-&lt;td&gt;-0.055892&lt;/td&gt;
-&lt;td&gt;-0.042697&lt;/td&gt;
-&lt;td&gt;0.062938&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.091203&lt;/td&gt;
-&lt;td&gt;0.091251&lt;/td&gt;
-&lt;td&gt;0.086518&lt;/td&gt;
-&lt;td&gt;-0.099176&lt;/td&gt;
-&lt;td&gt;-0.007368&lt;/td&gt;
-&lt;td&gt;-0.035587&lt;/td&gt;
-&lt;td&gt;-0.121515&lt;/td&gt;
-&lt;td&gt;0.048788&lt;/td&gt;
-&lt;td&gt;-0.053929&lt;/td&gt;
-&lt;td&gt;0.175260&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;td&gt;0.398736&lt;/td&gt;
-&lt;td&gt;0.420972&lt;/td&gt;
-&lt;td&gt;-0.516604&lt;/td&gt;
-&lt;td&gt;0.763651&lt;/td&gt;
-&lt;td&gt;0.091203&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.302188&lt;/td&gt;
-&lt;td&gt;0.731470&lt;/td&gt;
-&lt;td&gt;-0.769230&lt;/td&gt;
-&lt;td&gt;0.611441&lt;/td&gt;
-&lt;td&gt;0.668023&lt;/td&gt;
-&lt;td&gt;0.188933&lt;/td&gt;
-&lt;td&gt;-0.380051&lt;/td&gt;
-&lt;td&gt;0.590879&lt;/td&gt;
-&lt;td&gt;-0.427321&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;td&gt;-0.079971&lt;/td&gt;
-&lt;td&gt;-0.219247&lt;/td&gt;
-&lt;td&gt;0.311991&lt;/td&gt;
-&lt;td&gt;-0.391676&lt;/td&gt;
-&lt;td&gt;0.091251&lt;/td&gt;
-&lt;td&gt;-0.302188&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.240265&lt;/td&gt;
-&lt;td&gt;0.205246&lt;/td&gt;
-&lt;td&gt;-0.209847&lt;/td&gt;
-&lt;td&gt;-0.292048&lt;/td&gt;
-&lt;td&gt;-0.355501&lt;/td&gt;
-&lt;td&gt;0.128069&lt;/td&gt;
-&lt;td&gt;-0.613808&lt;/td&gt;
-&lt;td&gt;0.695360&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;td&gt;0.203784&lt;/td&gt;
-&lt;td&gt;0.352734&lt;/td&gt;
-&lt;td&gt;-0.569537&lt;/td&gt;
-&lt;td&gt;0.644779&lt;/td&gt;
-&lt;td&gt;0.086518&lt;/td&gt;
-&lt;td&gt;0.731470&lt;/td&gt;
-&lt;td&gt;-0.240265&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.747881&lt;/td&gt;
-&lt;td&gt;0.456022&lt;/td&gt;
-&lt;td&gt;0.506456&lt;/td&gt;
-&lt;td&gt;0.261515&lt;/td&gt;
-&lt;td&gt;-0.273534&lt;/td&gt;
-&lt;td&gt;0.602339&lt;/td&gt;
-&lt;td&gt;-0.376955&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;td&gt;-0.302211&lt;/td&gt;
-&lt;td&gt;-0.379670&lt;/td&gt;
-&lt;td&gt;0.664408&lt;/td&gt;
-&lt;td&gt;-0.708027&lt;/td&gt;
-&lt;td&gt;-0.099176&lt;/td&gt;
-&lt;td&gt;-0.769230&lt;/td&gt;
-&lt;td&gt;0.205246&lt;/td&gt;
-&lt;td&gt;-0.747881&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.494588&lt;/td&gt;
-&lt;td&gt;-0.534432&lt;/td&gt;
-&lt;td&gt;-0.232471&lt;/td&gt;
-&lt;td&gt;0.291512&lt;/td&gt;
-&lt;td&gt;-0.496996&lt;/td&gt;
-&lt;td&gt;0.249929&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;td&gt;0.686002&lt;/td&gt;
-&lt;td&gt;0.625505&lt;/td&gt;
-&lt;td&gt;-0.311948&lt;/td&gt;
-&lt;td&gt;0.595129&lt;/td&gt;
-&lt;td&gt;-0.007368&lt;/td&gt;
-&lt;td&gt;0.611441&lt;/td&gt;
-&lt;td&gt;-0.209847&lt;/td&gt;
-&lt;td&gt;0.456022&lt;/td&gt;
-&lt;td&gt;-0.494588&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.910228&lt;/td&gt;
-&lt;td&gt;0.464741&lt;/td&gt;
-&lt;td&gt;-0.444413&lt;/td&gt;
-&lt;td&gt;0.488676&lt;/td&gt;
-&lt;td&gt;-0.381626&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;td&gt;0.666626&lt;/td&gt;
-&lt;td&gt;0.582764&lt;/td&gt;
-&lt;td&gt;-0.314563&lt;/td&gt;
-&lt;td&gt;0.720760&lt;/td&gt;
-&lt;td&gt;-0.035587&lt;/td&gt;
-&lt;td&gt;0.668023&lt;/td&gt;
-&lt;td&gt;-0.292048&lt;/td&gt;
-&lt;td&gt;0.506456&lt;/td&gt;
-&lt;td&gt;-0.534432&lt;/td&gt;
-&lt;td&gt;0.910228&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.460853&lt;/td&gt;
-&lt;td&gt;-0.441808&lt;/td&gt;
-&lt;td&gt;0.543993&lt;/td&gt;
-&lt;td&gt;-0.468536&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;td&gt;0.291074&lt;/td&gt;
-&lt;td&gt;0.289946&lt;/td&gt;
-&lt;td&gt;-0.391679&lt;/td&gt;
-&lt;td&gt;0.383248&lt;/td&gt;
-&lt;td&gt;-0.121515&lt;/td&gt;
-&lt;td&gt;0.188933&lt;/td&gt;
-&lt;td&gt;-0.355501&lt;/td&gt;
-&lt;td&gt;0.261515&lt;/td&gt;
-&lt;td&gt;-0.232471&lt;/td&gt;
-&lt;td&gt;0.464741&lt;/td&gt;
-&lt;td&gt;0.460853&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.177383&lt;/td&gt;
-&lt;td&gt;0.374044&lt;/td&gt;
-&lt;td&gt;-0.507787&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;td&gt;-0.295041&lt;/td&gt;
-&lt;td&gt;-0.385064&lt;/td&gt;
-&lt;td&gt;0.175520&lt;/td&gt;
-&lt;td&gt;-0.356977&lt;/td&gt;
-&lt;td&gt;0.048788&lt;/td&gt;
-&lt;td&gt;-0.380051&lt;/td&gt;
-&lt;td&gt;0.128069&lt;/td&gt;
-&lt;td&gt;-0.273534&lt;/td&gt;
-&lt;td&gt;0.291512&lt;/td&gt;
-&lt;td&gt;-0.444413&lt;/td&gt;
-&lt;td&gt;-0.441808&lt;/td&gt;
-&lt;td&gt;-0.177383&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.366087&lt;/td&gt;
-&lt;td&gt;0.333461&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;td&gt;0.258465&lt;/td&gt;
-&lt;td&gt;0.455621&lt;/td&gt;
-&lt;td&gt;-0.412995&lt;/td&gt;
-&lt;td&gt;0.603800&lt;/td&gt;
-&lt;td&gt;-0.053929&lt;/td&gt;
-&lt;td&gt;0.590879&lt;/td&gt;
-&lt;td&gt;-0.613808&lt;/td&gt;
-&lt;td&gt;0.602339&lt;/td&gt;
-&lt;td&gt;-0.496996&lt;/td&gt;
-&lt;td&gt;0.488676&lt;/td&gt;
-&lt;td&gt;0.543993&lt;/td&gt;
-&lt;td&gt;0.374044&lt;/td&gt;
-&lt;td&gt;-0.366087&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.737663&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;td&gt;-0.226604&lt;/td&gt;
-&lt;td&gt;-0.388305&lt;/td&gt;
-&lt;td&gt;0.360445&lt;/td&gt;
-&lt;td&gt;-0.483725&lt;/td&gt;
-&lt;td&gt;0.175260&lt;/td&gt;
-&lt;td&gt;-0.427321&lt;/td&gt;
-&lt;td&gt;0.695360&lt;/td&gt;
-&lt;td&gt;-0.376955&lt;/td&gt;
-&lt;td&gt;0.249929&lt;/td&gt;
-&lt;td&gt;-0.381626&lt;/td&gt;
-&lt;td&gt;-0.468536&lt;/td&gt;
-&lt;td&gt;-0.507787&lt;/td&gt;
-&lt;td&gt;0.333461&lt;/td&gt;
-&lt;td&gt;-0.737663&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;crim&lt;/th&gt;
+      &lt;th&gt;zn&lt;/th&gt;
+      &lt;th&gt;indus&lt;/th&gt;
+      &lt;th&gt;chas&lt;/th&gt;
+      &lt;th&gt;nox&lt;/th&gt;
+      &lt;th&gt;rm&lt;/th&gt;
+      &lt;th&gt;age&lt;/th&gt;
+      &lt;th&gt;dis&lt;/th&gt;
+      &lt;th&gt;rad&lt;/th&gt;
+      &lt;th&gt;tax&lt;/th&gt;
+      &lt;th&gt;ptratio&lt;/th&gt;
+      &lt;th&gt;black&lt;/th&gt;
+      &lt;th&gt;lstat&lt;/th&gt;
+      &lt;th&gt;medv&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.407407&lt;/td&gt;
+      &lt;td&gt;-0.103393&lt;/td&gt;
+      &lt;td&gt;0.399439&lt;/td&gt;
+      &lt;td&gt;-0.003759&lt;/td&gt;
+      &lt;td&gt;0.398736&lt;/td&gt;
+      &lt;td&gt;-0.079971&lt;/td&gt;
+      &lt;td&gt;0.203784&lt;/td&gt;
+      &lt;td&gt;-0.302211&lt;/td&gt;
+      &lt;td&gt;0.686002&lt;/td&gt;
+      &lt;td&gt;0.666626&lt;/td&gt;
+      &lt;td&gt;0.291074&lt;/td&gt;
+      &lt;td&gt;-0.295041&lt;/td&gt;
+      &lt;td&gt;0.258465&lt;/td&gt;
+      &lt;td&gt;-0.226604&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;crim&lt;/th&gt;
+      &lt;td&gt;0.407407&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.200469&lt;/td&gt;
+      &lt;td&gt;0.406583&lt;/td&gt;
+      &lt;td&gt;-0.055892&lt;/td&gt;
+      &lt;td&gt;0.420972&lt;/td&gt;
+      &lt;td&gt;-0.219247&lt;/td&gt;
+      &lt;td&gt;0.352734&lt;/td&gt;
+      &lt;td&gt;-0.379670&lt;/td&gt;
+      &lt;td&gt;0.625505&lt;/td&gt;
+      &lt;td&gt;0.582764&lt;/td&gt;
+      &lt;td&gt;0.289946&lt;/td&gt;
+      &lt;td&gt;-0.385064&lt;/td&gt;
+      &lt;td&gt;0.455621&lt;/td&gt;
+      &lt;td&gt;-0.388305&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;zn&lt;/th&gt;
+      &lt;td&gt;-0.103393&lt;/td&gt;
+      &lt;td&gt;-0.200469&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.533828&lt;/td&gt;
+      &lt;td&gt;-0.042697&lt;/td&gt;
+      &lt;td&gt;-0.516604&lt;/td&gt;
+      &lt;td&gt;0.311991&lt;/td&gt;
+      &lt;td&gt;-0.569537&lt;/td&gt;
+      &lt;td&gt;0.664408&lt;/td&gt;
+      &lt;td&gt;-0.311948&lt;/td&gt;
+      &lt;td&gt;-0.314563&lt;/td&gt;
+      &lt;td&gt;-0.391679&lt;/td&gt;
+      &lt;td&gt;0.175520&lt;/td&gt;
+      &lt;td&gt;-0.412995&lt;/td&gt;
+      &lt;td&gt;0.360445&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;indus&lt;/th&gt;
+      &lt;td&gt;0.399439&lt;/td&gt;
+      &lt;td&gt;0.406583&lt;/td&gt;
+      &lt;td&gt;-0.533828&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.062938&lt;/td&gt;
+      &lt;td&gt;0.763651&lt;/td&gt;
+      &lt;td&gt;-0.391676&lt;/td&gt;
+      &lt;td&gt;0.644779&lt;/td&gt;
+      &lt;td&gt;-0.708027&lt;/td&gt;
+      &lt;td&gt;0.595129&lt;/td&gt;
+      &lt;td&gt;0.720760&lt;/td&gt;
+      &lt;td&gt;0.383248&lt;/td&gt;
+      &lt;td&gt;-0.356977&lt;/td&gt;
+      &lt;td&gt;0.603800&lt;/td&gt;
+      &lt;td&gt;-0.483725&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;chas&lt;/th&gt;
+      &lt;td&gt;-0.003759&lt;/td&gt;
+      &lt;td&gt;-0.055892&lt;/td&gt;
+      &lt;td&gt;-0.042697&lt;/td&gt;
+      &lt;td&gt;0.062938&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.091203&lt;/td&gt;
+      &lt;td&gt;0.091251&lt;/td&gt;
+      &lt;td&gt;0.086518&lt;/td&gt;
+      &lt;td&gt;-0.099176&lt;/td&gt;
+      &lt;td&gt;-0.007368&lt;/td&gt;
+      &lt;td&gt;-0.035587&lt;/td&gt;
+      &lt;td&gt;-0.121515&lt;/td&gt;
+      &lt;td&gt;0.048788&lt;/td&gt;
+      &lt;td&gt;-0.053929&lt;/td&gt;
+      &lt;td&gt;0.175260&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;nox&lt;/th&gt;
+      &lt;td&gt;0.398736&lt;/td&gt;
+      &lt;td&gt;0.420972&lt;/td&gt;
+      &lt;td&gt;-0.516604&lt;/td&gt;
+      &lt;td&gt;0.763651&lt;/td&gt;
+      &lt;td&gt;0.091203&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.302188&lt;/td&gt;
+      &lt;td&gt;0.731470&lt;/td&gt;
+      &lt;td&gt;-0.769230&lt;/td&gt;
+      &lt;td&gt;0.611441&lt;/td&gt;
+      &lt;td&gt;0.668023&lt;/td&gt;
+      &lt;td&gt;0.188933&lt;/td&gt;
+      &lt;td&gt;-0.380051&lt;/td&gt;
+      &lt;td&gt;0.590879&lt;/td&gt;
+      &lt;td&gt;-0.427321&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;rm&lt;/th&gt;
+      &lt;td&gt;-0.079971&lt;/td&gt;
+      &lt;td&gt;-0.219247&lt;/td&gt;
+      &lt;td&gt;0.311991&lt;/td&gt;
+      &lt;td&gt;-0.391676&lt;/td&gt;
+      &lt;td&gt;0.091251&lt;/td&gt;
+      &lt;td&gt;-0.302188&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.240265&lt;/td&gt;
+      &lt;td&gt;0.205246&lt;/td&gt;
+      &lt;td&gt;-0.209847&lt;/td&gt;
+      &lt;td&gt;-0.292048&lt;/td&gt;
+      &lt;td&gt;-0.355501&lt;/td&gt;
+      &lt;td&gt;0.128069&lt;/td&gt;
+      &lt;td&gt;-0.613808&lt;/td&gt;
+      &lt;td&gt;0.695360&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;age&lt;/th&gt;
+      &lt;td&gt;0.203784&lt;/td&gt;
+      &lt;td&gt;0.352734&lt;/td&gt;
+      &lt;td&gt;-0.569537&lt;/td&gt;
+      &lt;td&gt;0.644779&lt;/td&gt;
+      &lt;td&gt;0.086518&lt;/td&gt;
+      &lt;td&gt;0.731470&lt;/td&gt;
+      &lt;td&gt;-0.240265&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.747881&lt;/td&gt;
+      &lt;td&gt;0.456022&lt;/td&gt;
+      &lt;td&gt;0.506456&lt;/td&gt;
+      &lt;td&gt;0.261515&lt;/td&gt;
+      &lt;td&gt;-0.273534&lt;/td&gt;
+      &lt;td&gt;0.602339&lt;/td&gt;
+      &lt;td&gt;-0.376955&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;dis&lt;/th&gt;
+      &lt;td&gt;-0.302211&lt;/td&gt;
+      &lt;td&gt;-0.379670&lt;/td&gt;
+      &lt;td&gt;0.664408&lt;/td&gt;
+      &lt;td&gt;-0.708027&lt;/td&gt;
+      &lt;td&gt;-0.099176&lt;/td&gt;
+      &lt;td&gt;-0.769230&lt;/td&gt;
+      &lt;td&gt;0.205246&lt;/td&gt;
+      &lt;td&gt;-0.747881&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.494588&lt;/td&gt;
+      &lt;td&gt;-0.534432&lt;/td&gt;
+      &lt;td&gt;-0.232471&lt;/td&gt;
+      &lt;td&gt;0.291512&lt;/td&gt;
+      &lt;td&gt;-0.496996&lt;/td&gt;
+      &lt;td&gt;0.249929&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;rad&lt;/th&gt;
+      &lt;td&gt;0.686002&lt;/td&gt;
+      &lt;td&gt;0.625505&lt;/td&gt;
+      &lt;td&gt;-0.311948&lt;/td&gt;
+      &lt;td&gt;0.595129&lt;/td&gt;
+      &lt;td&gt;-0.007368&lt;/td&gt;
+      &lt;td&gt;0.611441&lt;/td&gt;
+      &lt;td&gt;-0.209847&lt;/td&gt;
+      &lt;td&gt;0.456022&lt;/td&gt;
+      &lt;td&gt;-0.494588&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.910228&lt;/td&gt;
+      &lt;td&gt;0.464741&lt;/td&gt;
+      &lt;td&gt;-0.444413&lt;/td&gt;
+      &lt;td&gt;0.488676&lt;/td&gt;
+      &lt;td&gt;-0.381626&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;tax&lt;/th&gt;
+      &lt;td&gt;0.666626&lt;/td&gt;
+      &lt;td&gt;0.582764&lt;/td&gt;
+      &lt;td&gt;-0.314563&lt;/td&gt;
+      &lt;td&gt;0.720760&lt;/td&gt;
+      &lt;td&gt;-0.035587&lt;/td&gt;
+      &lt;td&gt;0.668023&lt;/td&gt;
+      &lt;td&gt;-0.292048&lt;/td&gt;
+      &lt;td&gt;0.506456&lt;/td&gt;
+      &lt;td&gt;-0.534432&lt;/td&gt;
+      &lt;td&gt;0.910228&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;0.460853&lt;/td&gt;
+      &lt;td&gt;-0.441808&lt;/td&gt;
+      &lt;td&gt;0.543993&lt;/td&gt;
+      &lt;td&gt;-0.468536&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ptratio&lt;/th&gt;
+      &lt;td&gt;0.291074&lt;/td&gt;
+      &lt;td&gt;0.289946&lt;/td&gt;
+      &lt;td&gt;-0.391679&lt;/td&gt;
+      &lt;td&gt;0.383248&lt;/td&gt;
+      &lt;td&gt;-0.121515&lt;/td&gt;
+      &lt;td&gt;0.188933&lt;/td&gt;
+      &lt;td&gt;-0.355501&lt;/td&gt;
+      &lt;td&gt;0.261515&lt;/td&gt;
+      &lt;td&gt;-0.232471&lt;/td&gt;
+      &lt;td&gt;0.464741&lt;/td&gt;
+      &lt;td&gt;0.460853&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.177383&lt;/td&gt;
+      &lt;td&gt;0.374044&lt;/td&gt;
+      &lt;td&gt;-0.507787&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;black&lt;/th&gt;
+      &lt;td&gt;-0.295041&lt;/td&gt;
+      &lt;td&gt;-0.385064&lt;/td&gt;
+      &lt;td&gt;0.175520&lt;/td&gt;
+      &lt;td&gt;-0.356977&lt;/td&gt;
+      &lt;td&gt;0.048788&lt;/td&gt;
+      &lt;td&gt;-0.380051&lt;/td&gt;
+      &lt;td&gt;0.128069&lt;/td&gt;
+      &lt;td&gt;-0.273534&lt;/td&gt;
+      &lt;td&gt;0.291512&lt;/td&gt;
+      &lt;td&gt;-0.444413&lt;/td&gt;
+      &lt;td&gt;-0.441808&lt;/td&gt;
+      &lt;td&gt;-0.177383&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.366087&lt;/td&gt;
+      &lt;td&gt;0.333461&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;lstat&lt;/th&gt;
+      &lt;td&gt;0.258465&lt;/td&gt;
+      &lt;td&gt;0.455621&lt;/td&gt;
+      &lt;td&gt;-0.412995&lt;/td&gt;
+      &lt;td&gt;0.603800&lt;/td&gt;
+      &lt;td&gt;-0.053929&lt;/td&gt;
+      &lt;td&gt;0.590879&lt;/td&gt;
+      &lt;td&gt;-0.613808&lt;/td&gt;
+      &lt;td&gt;0.602339&lt;/td&gt;
+      &lt;td&gt;-0.496996&lt;/td&gt;
+      &lt;td&gt;0.488676&lt;/td&gt;
+      &lt;td&gt;0.543993&lt;/td&gt;
+      &lt;td&gt;0.374044&lt;/td&gt;
+      &lt;td&gt;-0.366087&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+      &lt;td&gt;-0.737663&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;medv&lt;/th&gt;
+      &lt;td&gt;-0.226604&lt;/td&gt;
+      &lt;td&gt;-0.388305&lt;/td&gt;
+      &lt;td&gt;0.360445&lt;/td&gt;
+      &lt;td&gt;-0.483725&lt;/td&gt;
+      &lt;td&gt;0.175260&lt;/td&gt;
+      &lt;td&gt;-0.427321&lt;/td&gt;
+      &lt;td&gt;0.695360&lt;/td&gt;
+      &lt;td&gt;-0.376955&lt;/td&gt;
+      &lt;td&gt;0.249929&lt;/td&gt;
+      &lt;td&gt;-0.381626&lt;/td&gt;
+      &lt;td&gt;-0.468536&lt;/td&gt;
+      &lt;td&gt;-0.507787&lt;/td&gt;
+      &lt;td&gt;0.333461&lt;/td&gt;
+      &lt;td&gt;-0.737663&lt;/td&gt;
+      &lt;td&gt;1.000000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;corrcoef&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea output_execute_result"&gt;
 &lt;pre&gt;array([[ 1.        ,  0.69535995],
        [ 0.69535995,  1.        ]])&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Plotting-Histogram"&gt;Plotting Histogram&lt;a class="anchor-link" href="#Plotting-Histogram"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Plotting-Histogram"&gt;Plotting Histogram&lt;a class="anchor-link" href="#Plotting-Histogram"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Histogram of Crime Rate'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Per capita crime rate by town'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Frequency'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Histogram of Crime Rate&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Per capita crime rate by town&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Frequency&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAETCAYAAADd6corAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
@@ -11805,42 +12024,61 @@ FPOtAfr3917nAqdJOovqInDfkHRDee1HVFcKbbUUmCbp01SHkY4s7/FhSUupDhH15W5VN/g5lmrb
 nylpY6o9hg+UZSyQNB64wPYzkhax+oUcYwTIr5VivVUOqxxn+95O17K+kDSGKmim2X6i0/XE8JXD
 ShGjRDlEdgNwdoIhBpI9h4iIqMmeQ0RE1CQcIiKiJuEQERE1CYeIiKhJOERERM1/A3FAkJlOpxrm
 AAAAAElFTkSuQmCC
-" /&gt;
+"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Plotting-Scattergraph"&gt;Plotting Scattergraph&lt;a class="anchor-link" href="#Plotting-Scattergraph"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Plotting-Scattergraph"&gt;Plotting Scattergraph&lt;a class="anchor-link" href="#Plotting-Scattergraph"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'zn'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'indus'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;zn&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;indus&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;indus&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;&lt;matplotlib.collections.pathcollection at 0x114cfb990&gt;&lt;/pre&gt;
+&lt;pre&gt;&amp;lt;matplotlib.collections.PathCollection at 0x114cfb990&amp;gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEICAYAAAC55kg0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
@@ -12031,34 +12269,53 @@ XClpLsn39UMR8QIwT9LPST7jl0iqM+cBSPog8AtJL5Ak2M8VxbMF8I00ET6fvuaLwLWS7iCpmluc
 7mtPYGpEHFe0j/W+31GHDhq18gRyNUqTwHURsW+TQzHrapI+CjwTEVc1MYa7STqGLGpWDAPlkoCZ
 dYrlJFV+NgAuCZiZdTE3DJuZdTEnATOzLuYkYGbWxZwEzMy6mJOAmVkX+/8pqHVy2dmr+wAAAABJ
 RU5ErkJggg==
-" /&gt;
+"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[9]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'rm'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'medv'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rm&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;medv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[9]:&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;&lt;matplotlib.collections.pathcollection at 0x114ef0850&gt;&lt;/pre&gt;
+&lt;pre&gt;&amp;lt;matplotlib.collections.PathCollection at 0x114ef0850&amp;gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEPCAYAAACk43iMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
@@ -12324,178 +12581,240 @@ wVtV1NLv3/i2/zV4K7K1Za/dI17CuWtVdcz/jB/wX/tRNe04MB1v1bobb6LxHrziPkZGWAI5o2ZE
 5A14pqbT8X64PwH+UVXXxJ5opIZ4jvOPqup7Gi1LGojIKcBrgU/iTTAGgL8sM0saKWMrAaMeHsKb
 ud2C5wy8l+pn74ZRzgbgY3jO8mnA100BZIutBAzDMNoY2ydgGIbRxpgSMAzDaGNMCRiGYbQxpgQM
 wzDaGFMChmEYbYwpAcMwjDbm/wP+7z9diWICJAAAAABJRU5ErkJggg==
-" /&gt;
+"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Linear-Regression"&gt;Linear Regression&lt;a class="anchor-link" href="#Linear-Regression"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Linear-Regression"&gt;Linear Regression&lt;a class="anchor-link" href="#Linear-Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[10]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[11]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_matrix&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_matrix&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[12]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[13]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;/Users/akimach/pelican-env/lib/python2.7/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+&lt;pre&gt;/Users/akimach/pelican-env/lib/python2.7/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to &amp;#39;gelss&amp;#39; driver.
   warnings.warn(mesg, RuntimeWarning)
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea output_execute_result"&gt;
 &lt;pre&gt;LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[14]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Coefficient:{}, Intercept:{}"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coef_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intercept_&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Coefficient:{}, Intercept:{}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coef_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intercept_&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;Coefficient:[[ 9.10210898]], Intercept:[-34.67062078]
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h4 id="R^2"&gt;R^2&lt;a class="anchor-link" href="#R^2"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;$$R^{2}=1-\frac{\sum_{i=1}^{n}{\left( y_{i}-f_{i} \right)}}{\sum_{i}^{n}{\left( y_{i}-\overline{y} \right)}}$$&lt;/p&gt;
+&lt;h4 id="R^2"&gt;R^2&lt;a class="anchor-link" href="#R^2"&gt;&amp;#182;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;$$R^{2}=1-\frac{\sum_{i=1}^{n}{\left( y_{i}-f_{i} \right)}}{\sum_{i}^{n}{\left( y_{i}-\overline{y} \right)}}$$&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[15]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"R^2 :&lt;/span&gt;&lt;span class="si"&gt;%f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;R^2 :&lt;/span&gt;&lt;span class="si"&gt;%f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;R^2 :0.483525
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[16]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coef_&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intercept_&lt;/span&gt;
 &lt;span class="n"&gt;_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Re-plotting"&gt;Re-plotting&lt;a class="anchor-link" href="#Re-plotting"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="Re-plotting"&gt;Re-plotting&lt;a class="anchor-link" href="#Re-plotting"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[17]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Average number of rooms per dwelling'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Median value of owner-occupied homes in \$1000s'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Average number of rooms per dwelling&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Median value of owner-occupied homes in \$1000s&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'deepskyblue'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;deepskyblue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
+
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
+
+
+
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.lines.line2d at 0x11576db10&gt;]&lt;/pre&gt;
+&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x11576db10&amp;gt;]&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
+
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
 &lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAEPCAYAAACp/QjLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
@@ -12819,20 +13138,26 @@ r/0jlnE8UIIzy23FuQH5BE4DJSNFmPCekXRE5CyckNWVOP/Q/wKuV9VXI77RSBriJOyvVdVPZNqW
 ZCAilwOnAd/AufGoAd4dFN40kozNHIz/374dGgEIxUAUPEet9EQf9ICjAHpBxDBzCvHdbhMvmUxW
 eDKT3pk5Ql75P+3D151kzxzptySHMKxlcwCg+HMAoIgDAEUcACjiAEARBwCKOABQXtKqbNYNX45V
 AAAAAElFTkSuQmCC
-" /&gt;
+"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+ 
+
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');

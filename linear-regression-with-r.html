@@ -1,43 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8" />
-        <title>Linear regression of Boston Housing Dataset using R</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="akimach.note Atom Feed" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="akimach.note Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="akimach" />
+<meta name="description" content="Linear regression of Boston Housing Dataset using R¶ Load Dataset¶Housing Values in Suburbs of Boston" />
+<meta name="keywords" content="R">
+<meta property="og:site_name" content="akimach.note"/>
+<meta property="og:title" content="Linear regression of Boston Housing Dataset using R"/>
+<meta property="og:description" content="Linear regression of Boston Housing Dataset using R¶ Load Dataset¶Housing Values in Suburbs of Boston"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./linear-regression-with-r.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-11-06 17:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/akimach.html">
+<meta property="article:section" content="Notebook"/>
+<meta property="article:tag" content="R"/>
+<meta property="og:image" content="">
+
+  <title>akimach.note &ndash; Linear regression of Boston Housing Dataset using R</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="./">akimach.note </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="./category/notebook.html">Notebook</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./linear-regression-with-r.html" rel="bookmark"
-           title="Permalink to Linear regression of Boston Housing Dataset using R">Linear regression of Boston Housing Dataset using R</a></h1>
-    </header>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-11-06T17:00:00+09:00">
-                Published: Mon 06 November 2017
-        </abbr>
+      <nav>
+        <ul class="list">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/akimach.html">akimach</a>
-        </address>
-<p>In <a href="./category/notebook.html">Notebook</a>.</p>
-<p>tags: <a href="./tag/r.html">R</a> </p>
-</footer><!-- /.post-info -->      <style type="text/css">/*!
+          <li><a href="https://github.com/akimach" target="_blank">About</a></li>
+          <li><a href="https://github.com/akimach" target="_blank">Github</a></li>
+          <li><a href="medium.com/@akimach" target="_blank">Blog</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <h1 id="linear-regression-with-r">Linear regression of Boston Housing Dataset using R</h1>
+    <p>
+          Posted on Mon 06 November 2017 in <a href="./category/notebook.html">Notebook</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1013,7 +1055,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R">Linear regression of Boston Housing Dataset using R<a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R">¶</a></h2>
+<h2 id="Linear-regression-of-Boston-Housing-Dataset-using-R">Linear regression of Boston Housing Dataset using R<a class="anchor-link" href="#Linear-regression-of-Boston-Housing-Dataset-using-R">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1021,87 +1063,113 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Load-Dataset">Load Dataset<a class="anchor-link" href="#Load-Dataset">¶</a></h3><p><a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html">Housing Values in Suburbs of Boston</a></p>
+<h3 id="Load-Dataset">Load Dataset<a class="anchor-link" href="#Load-Dataset">&#182;</a></h3><p><a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html">Housing Values in Suburbs of Boston</a></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>url <span class="o"><-</span> <span class="s">"https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv"</span>
-path <span class="o"><-</span> <span class="s">"/tmp/Boston.csv"</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>url <span class="o">&lt;-</span> <span class="s">&quot;https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv&quot;</span>
+path <span class="o">&lt;-</span> <span class="s">&quot;/tmp/Boston.csv&quot;</span>
 download.file<span class="p">(</span><span class="kp">url</span><span class="p">,</span> path<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>df <span class="o"><-</span> read.csv<span class="p">(</span>path<span class="p">,</span> header <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>df <span class="o">&lt;-</span> read.csv<span class="p">(</span>path<span class="p">,</span> header <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>df<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
 <div class="output_html rendered_html output_subarea ">
 <table>
 <thead><tr><th scope="col">X</th><th scope="col">crim</th><th scope="col">zn</th><th scope="col">indus</th><th scope="col">chas</th><th scope="col">nox</th><th scope="col">rm</th><th scope="col">age</th><th scope="col">dis</th><th scope="col">rad</th><th scope="col">tax</th><th scope="col">ptratio</th><th scope="col">black</th><th scope="col">lstat</th><th scope="col">medv</th></tr></thead>
 <tbody>
-<tr><td>1      </td><td>0.00632</td><td>18     </td><td>2.31   </td><td>0      </td><td>0.538  </td><td>6.575  </td><td>65.2   </td><td>4.0900 </td><td>1      </td><td>296    </td><td>15.3   </td><td>396.90 </td><td>4.98   </td><td>24.0   </td></tr>
-<tr><td>2      </td><td>0.02731</td><td> 0     </td><td>7.07   </td><td>0      </td><td>0.469  </td><td>6.421  </td><td>78.9   </td><td>4.9671 </td><td>2      </td><td>242    </td><td>17.8   </td><td>396.90 </td><td>9.14   </td><td>21.6   </td></tr>
-<tr><td>3      </td><td>0.02729</td><td> 0     </td><td>7.07   </td><td>0      </td><td>0.469  </td><td>7.185  </td><td>61.1   </td><td>4.9671 </td><td>2      </td><td>242    </td><td>17.8   </td><td>392.83 </td><td>4.03   </td><td>34.7   </td></tr>
-<tr><td>4      </td><td>0.03237</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>6.998  </td><td>45.8   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>394.63 </td><td>2.94   </td><td>33.4   </td></tr>
-<tr><td>5      </td><td>0.06905</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>7.147  </td><td>54.2   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>396.90 </td><td>5.33   </td><td>36.2   </td></tr>
-<tr><td>6      </td><td>0.02985</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>6.430  </td><td>58.7   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>394.12 </td><td>5.21   </td><td>28.7   </td></tr>
+	<tr><td>1      </td><td>0.00632</td><td>18     </td><td>2.31   </td><td>0      </td><td>0.538  </td><td>6.575  </td><td>65.2   </td><td>4.0900 </td><td>1      </td><td>296    </td><td>15.3   </td><td>396.90 </td><td>4.98   </td><td>24.0   </td></tr>
+	<tr><td>2      </td><td>0.02731</td><td> 0     </td><td>7.07   </td><td>0      </td><td>0.469  </td><td>6.421  </td><td>78.9   </td><td>4.9671 </td><td>2      </td><td>242    </td><td>17.8   </td><td>396.90 </td><td>9.14   </td><td>21.6   </td></tr>
+	<tr><td>3      </td><td>0.02729</td><td> 0     </td><td>7.07   </td><td>0      </td><td>0.469  </td><td>7.185  </td><td>61.1   </td><td>4.9671 </td><td>2      </td><td>242    </td><td>17.8   </td><td>392.83 </td><td>4.03   </td><td>34.7   </td></tr>
+	<tr><td>4      </td><td>0.03237</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>6.998  </td><td>45.8   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>394.63 </td><td>2.94   </td><td>33.4   </td></tr>
+	<tr><td>5      </td><td>0.06905</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>7.147  </td><td>54.2   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>396.90 </td><td>5.33   </td><td>36.2   </td></tr>
+	<tr><td>6      </td><td>0.02985</td><td> 0     </td><td>2.18   </td><td>0      </td><td>0.458  </td><td>6.430  </td><td>58.7   </td><td>6.0622 </td><td>3      </td><td>222    </td><td>18.7   </td><td>394.12 </td><td>5.21   </td><td>28.7   </td></tr>
 </tbody>
 </table>
+
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Statistic">Statistic<a class="anchor-link" href="#Statistic">¶</a></h3>
+<h3 id="Statistic">Statistic<a class="anchor-link" href="#Statistic">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>df<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_text output_subarea ">
 <pre>       X              crim                zn             indus      
  Min.   :  1.0   Min.   : 0.00632   Min.   :  0.00   Min.   : 0.46  
@@ -1132,106 +1200,142 @@ download.file<span class="p">(</span><span class="kp">url</span><span class="p">
  3rd Qu.:396.23   3rd Qu.:16.95   3rd Qu.:25.00  
  Max.   :396.90   Max.   :37.97   Max.   :50.00  </pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlation-coefficient¶">Correlation coefficient¶<a class="anchor-link" href="#Correlation-coefficient¶">¶</a></h3>
+<h3 id="Correlation-coefficient¶">Correlation coefficient&#182;<a class="anchor-link" href="#Correlation-coefficient¶">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span>df<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
 <div class="output_html rendered_html output_subarea ">
 <table>
 <thead><tr><th></th><th scope="col">X</th><th scope="col">crim</th><th scope="col">zn</th><th scope="col">indus</th><th scope="col">chas</th><th scope="col">nox</th><th scope="col">rm</th><th scope="col">age</th><th scope="col">dis</th><th scope="col">rad</th><th scope="col">tax</th><th scope="col">ptratio</th><th scope="col">black</th><th scope="col">lstat</th><th scope="col">medv</th></tr></thead>
 <tbody>
-<tr><th scope="row">X</th><td> 1.000000000</td><td> 0.40740717 </td><td>-0.10339336 </td><td> 0.39943885 </td><td>-0.003759115</td><td> 0.39873617 </td><td>-0.07997115 </td><td> 0.20378351 </td><td>-0.30221096 </td><td> 0.686001976</td><td> 0.66662592 </td><td> 0.2910742  </td><td>-0.29504123 </td><td> 0.2584648  </td><td>-0.2266036  </td></tr>
-<tr><th scope="row">crim</th><td> 0.407407172</td><td> 1.00000000 </td><td>-0.20046922 </td><td> 0.40658341 </td><td>-0.055891582</td><td> 0.42097171 </td><td>-0.21924670 </td><td> 0.35273425 </td><td>-0.37967009 </td><td> 0.625505145</td><td> 0.58276431 </td><td> 0.2899456  </td><td>-0.38506394 </td><td> 0.4556215  </td><td>-0.3883046  </td></tr>
-<tr><th scope="row">zn</th><td>-0.103393357</td><td>-0.20046922 </td><td> 1.00000000 </td><td>-0.53382819 </td><td>-0.042696719</td><td>-0.51660371 </td><td> 0.31199059 </td><td>-0.56953734 </td><td> 0.66440822 </td><td>-0.311947826</td><td>-0.31456332 </td><td>-0.3916785  </td><td> 0.17552032 </td><td>-0.4129946  </td><td> 0.3604453  </td></tr>
-<tr><th scope="row">indus</th><td> 0.399438850</td><td> 0.40658341 </td><td>-0.53382819 </td><td> 1.00000000 </td><td> 0.062938027</td><td> 0.76365145 </td><td>-0.39167585 </td><td> 0.64477851 </td><td>-0.70802699 </td><td> 0.595129275</td><td> 0.72076018 </td><td> 0.3832476  </td><td>-0.35697654 </td><td> 0.6037997  </td><td>-0.4837252  </td></tr>
-<tr><th scope="row">chas</th><td>-0.003759115</td><td>-0.05589158 </td><td>-0.04269672 </td><td> 0.06293803 </td><td> 1.000000000</td><td> 0.09120281 </td><td> 0.09125123 </td><td> 0.08651777 </td><td>-0.09917578 </td><td>-0.007368241</td><td>-0.03558652 </td><td>-0.1215152  </td><td> 0.04878848 </td><td>-0.0539293  </td><td> 0.1752602  </td></tr>
-<tr><th scope="row">nox</th><td> 0.398736174</td><td> 0.42097171 </td><td>-0.51660371 </td><td> 0.76365145 </td><td> 0.091202807</td><td> 1.00000000 </td><td>-0.30218819 </td><td> 0.73147010 </td><td>-0.76923011 </td><td> 0.611440563</td><td> 0.66802320 </td><td> 0.1889327  </td><td>-0.38005064 </td><td> 0.5908789  </td><td>-0.4273208  </td></tr>
-<tr><th scope="row">rm</th><td>-0.079971150</td><td>-0.21924670 </td><td> 0.31199059 </td><td>-0.39167585 </td><td> 0.091251225</td><td>-0.30218819 </td><td> 1.00000000 </td><td>-0.24026493 </td><td> 0.20524621 </td><td>-0.209846668</td><td>-0.29204783 </td><td>-0.3555015  </td><td> 0.12806864 </td><td>-0.6138083  </td><td> 0.6953599  </td></tr>
-<tr><th scope="row">age</th><td> 0.203783510</td><td> 0.35273425 </td><td>-0.56953734 </td><td> 0.64477851 </td><td> 0.086517774</td><td> 0.73147010 </td><td>-0.24026493 </td><td> 1.00000000 </td><td>-0.74788054 </td><td> 0.456022452</td><td> 0.50645559 </td><td> 0.2615150  </td><td>-0.27353398 </td><td> 0.6023385  </td><td>-0.3769546  </td></tr>
-<tr><th scope="row">dis</th><td>-0.302210959</td><td>-0.37967009 </td><td> 0.66440822 </td><td>-0.70802699 </td><td>-0.099175780</td><td>-0.76923011 </td><td> 0.20524621 </td><td>-0.74788054 </td><td> 1.00000000 </td><td>-0.494587930</td><td>-0.53443158 </td><td>-0.2324705  </td><td> 0.29151167 </td><td>-0.4969958  </td><td> 0.2499287  </td></tr>
-<tr><th scope="row">rad</th><td> 0.686001976</td><td> 0.62550515 </td><td>-0.31194783 </td><td> 0.59512927 </td><td>-0.007368241</td><td> 0.61144056 </td><td>-0.20984667 </td><td> 0.45602245 </td><td>-0.49458793 </td><td> 1.000000000</td><td> 0.91022819 </td><td> 0.4647412  </td><td>-0.44441282 </td><td> 0.4886763  </td><td>-0.3816262  </td></tr>
-<tr><th scope="row">tax</th><td> 0.666625924</td><td> 0.58276431 </td><td>-0.31456332 </td><td> 0.72076018 </td><td>-0.035586518</td><td> 0.66802320 </td><td>-0.29204783 </td><td> 0.50645559 </td><td>-0.53443158 </td><td> 0.910228189</td><td> 1.00000000 </td><td> 0.4608530  </td><td>-0.44180801 </td><td> 0.5439934  </td><td>-0.4685359  </td></tr>
-<tr><th scope="row">ptratio</th><td> 0.291074227</td><td> 0.28994558 </td><td>-0.39167855 </td><td> 0.38324756 </td><td>-0.121515174</td><td> 0.18893268 </td><td>-0.35550149 </td><td> 0.26151501 </td><td>-0.23247054 </td><td> 0.464741179</td><td> 0.46085304 </td><td> 1.0000000  </td><td>-0.17738330 </td><td> 0.3740443  </td><td>-0.5077867  </td></tr>
-<tr><th scope="row">black</th><td>-0.295041232</td><td>-0.38506394 </td><td> 0.17552032 </td><td>-0.35697654 </td><td> 0.048788485</td><td>-0.38005064 </td><td> 0.12806864 </td><td>-0.27353398 </td><td> 0.29151167 </td><td>-0.444412816</td><td>-0.44180801 </td><td>-0.1773833  </td><td> 1.00000000 </td><td>-0.3660869  </td><td> 0.3334608  </td></tr>
-<tr><th scope="row">lstat</th><td> 0.258464770</td><td> 0.45562148 </td><td>-0.41299457 </td><td> 0.60379972 </td><td>-0.053929298</td><td> 0.59087892 </td><td>-0.61380827 </td><td> 0.60233853 </td><td>-0.49699583 </td><td> 0.488676335</td><td> 0.54399341 </td><td> 0.3740443  </td><td>-0.36608690 </td><td> 1.0000000  </td><td>-0.7376627  </td></tr>
-<tr><th scope="row">medv</th><td>-0.226603643</td><td>-0.38830461 </td><td> 0.36044534 </td><td>-0.48372516 </td><td> 0.175260177</td><td>-0.42732077 </td><td> 0.69535995 </td><td>-0.37695457 </td><td> 0.24992873 </td><td>-0.381626231</td><td>-0.46853593 </td><td>-0.5077867  </td><td> 0.33346082 </td><td>-0.7376627  </td><td> 1.0000000  </td></tr>
+	<tr><th scope="row">X</th><td> 1.000000000</td><td> 0.40740717 </td><td>-0.10339336 </td><td> 0.39943885 </td><td>-0.003759115</td><td> 0.39873617 </td><td>-0.07997115 </td><td> 0.20378351 </td><td>-0.30221096 </td><td> 0.686001976</td><td> 0.66662592 </td><td> 0.2910742  </td><td>-0.29504123 </td><td> 0.2584648  </td><td>-0.2266036  </td></tr>
+	<tr><th scope="row">crim</th><td> 0.407407172</td><td> 1.00000000 </td><td>-0.20046922 </td><td> 0.40658341 </td><td>-0.055891582</td><td> 0.42097171 </td><td>-0.21924670 </td><td> 0.35273425 </td><td>-0.37967009 </td><td> 0.625505145</td><td> 0.58276431 </td><td> 0.2899456  </td><td>-0.38506394 </td><td> 0.4556215  </td><td>-0.3883046  </td></tr>
+	<tr><th scope="row">zn</th><td>-0.103393357</td><td>-0.20046922 </td><td> 1.00000000 </td><td>-0.53382819 </td><td>-0.042696719</td><td>-0.51660371 </td><td> 0.31199059 </td><td>-0.56953734 </td><td> 0.66440822 </td><td>-0.311947826</td><td>-0.31456332 </td><td>-0.3916785  </td><td> 0.17552032 </td><td>-0.4129946  </td><td> 0.3604453  </td></tr>
+	<tr><th scope="row">indus</th><td> 0.399438850</td><td> 0.40658341 </td><td>-0.53382819 </td><td> 1.00000000 </td><td> 0.062938027</td><td> 0.76365145 </td><td>-0.39167585 </td><td> 0.64477851 </td><td>-0.70802699 </td><td> 0.595129275</td><td> 0.72076018 </td><td> 0.3832476  </td><td>-0.35697654 </td><td> 0.6037997  </td><td>-0.4837252  </td></tr>
+	<tr><th scope="row">chas</th><td>-0.003759115</td><td>-0.05589158 </td><td>-0.04269672 </td><td> 0.06293803 </td><td> 1.000000000</td><td> 0.09120281 </td><td> 0.09125123 </td><td> 0.08651777 </td><td>-0.09917578 </td><td>-0.007368241</td><td>-0.03558652 </td><td>-0.1215152  </td><td> 0.04878848 </td><td>-0.0539293  </td><td> 0.1752602  </td></tr>
+	<tr><th scope="row">nox</th><td> 0.398736174</td><td> 0.42097171 </td><td>-0.51660371 </td><td> 0.76365145 </td><td> 0.091202807</td><td> 1.00000000 </td><td>-0.30218819 </td><td> 0.73147010 </td><td>-0.76923011 </td><td> 0.611440563</td><td> 0.66802320 </td><td> 0.1889327  </td><td>-0.38005064 </td><td> 0.5908789  </td><td>-0.4273208  </td></tr>
+	<tr><th scope="row">rm</th><td>-0.079971150</td><td>-0.21924670 </td><td> 0.31199059 </td><td>-0.39167585 </td><td> 0.091251225</td><td>-0.30218819 </td><td> 1.00000000 </td><td>-0.24026493 </td><td> 0.20524621 </td><td>-0.209846668</td><td>-0.29204783 </td><td>-0.3555015  </td><td> 0.12806864 </td><td>-0.6138083  </td><td> 0.6953599  </td></tr>
+	<tr><th scope="row">age</th><td> 0.203783510</td><td> 0.35273425 </td><td>-0.56953734 </td><td> 0.64477851 </td><td> 0.086517774</td><td> 0.73147010 </td><td>-0.24026493 </td><td> 1.00000000 </td><td>-0.74788054 </td><td> 0.456022452</td><td> 0.50645559 </td><td> 0.2615150  </td><td>-0.27353398 </td><td> 0.6023385  </td><td>-0.3769546  </td></tr>
+	<tr><th scope="row">dis</th><td>-0.302210959</td><td>-0.37967009 </td><td> 0.66440822 </td><td>-0.70802699 </td><td>-0.099175780</td><td>-0.76923011 </td><td> 0.20524621 </td><td>-0.74788054 </td><td> 1.00000000 </td><td>-0.494587930</td><td>-0.53443158 </td><td>-0.2324705  </td><td> 0.29151167 </td><td>-0.4969958  </td><td> 0.2499287  </td></tr>
+	<tr><th scope="row">rad</th><td> 0.686001976</td><td> 0.62550515 </td><td>-0.31194783 </td><td> 0.59512927 </td><td>-0.007368241</td><td> 0.61144056 </td><td>-0.20984667 </td><td> 0.45602245 </td><td>-0.49458793 </td><td> 1.000000000</td><td> 0.91022819 </td><td> 0.4647412  </td><td>-0.44441282 </td><td> 0.4886763  </td><td>-0.3816262  </td></tr>
+	<tr><th scope="row">tax</th><td> 0.666625924</td><td> 0.58276431 </td><td>-0.31456332 </td><td> 0.72076018 </td><td>-0.035586518</td><td> 0.66802320 </td><td>-0.29204783 </td><td> 0.50645559 </td><td>-0.53443158 </td><td> 0.910228189</td><td> 1.00000000 </td><td> 0.4608530  </td><td>-0.44180801 </td><td> 0.5439934  </td><td>-0.4685359  </td></tr>
+	<tr><th scope="row">ptratio</th><td> 0.291074227</td><td> 0.28994558 </td><td>-0.39167855 </td><td> 0.38324756 </td><td>-0.121515174</td><td> 0.18893268 </td><td>-0.35550149 </td><td> 0.26151501 </td><td>-0.23247054 </td><td> 0.464741179</td><td> 0.46085304 </td><td> 1.0000000  </td><td>-0.17738330 </td><td> 0.3740443  </td><td>-0.5077867  </td></tr>
+	<tr><th scope="row">black</th><td>-0.295041232</td><td>-0.38506394 </td><td> 0.17552032 </td><td>-0.35697654 </td><td> 0.048788485</td><td>-0.38005064 </td><td> 0.12806864 </td><td>-0.27353398 </td><td> 0.29151167 </td><td>-0.444412816</td><td>-0.44180801 </td><td>-0.1773833  </td><td> 1.00000000 </td><td>-0.3660869  </td><td> 0.3334608  </td></tr>
+	<tr><th scope="row">lstat</th><td> 0.258464770</td><td> 0.45562148 </td><td>-0.41299457 </td><td> 0.60379972 </td><td>-0.053929298</td><td> 0.59087892 </td><td>-0.61380827 </td><td> 0.60233853 </td><td>-0.49699583 </td><td> 0.488676335</td><td> 0.54399341 </td><td> 0.3740443  </td><td>-0.36608690 </td><td> 1.0000000  </td><td>-0.7376627  </td></tr>
+	<tr><th scope="row">medv</th><td>-0.226603643</td><td>-0.38830461 </td><td> 0.36044534 </td><td>-0.48372516 </td><td> 0.175260177</td><td>-0.42732077 </td><td> 0.69535995 </td><td>-0.37695457 </td><td> 0.24992873 </td><td>-0.381626231</td><td>-0.46853593 </td><td>-0.5077867  </td><td> 0.33346082 </td><td>-0.7376627  </td><td> 1.0000000  </td></tr>
 </tbody>
 </table>
+
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span>df<span class="p">[</span><span class="s">"rm"</span><span class="p">],</span> df<span class="p">[</span><span class="s">"medv"</span><span class="p">])</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span>df<span class="p">[</span><span class="s">&quot;rm&quot;</span><span class="p">],</span> df<span class="p">[</span><span class="s">&quot;medv&quot;</span><span class="p">])</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
 <div class="output_html rendered_html output_subarea ">
 <table>
 <thead><tr><th></th><th scope="col">medv</th></tr></thead>
 <tbody>
-<tr><th scope="row">rm</th><td>0.6953599</td></tr>
+	<tr><th scope="row">rm</th><td>0.6953599</td></tr>
 </tbody>
 </table>
+
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotting">Plotting<a class="anchor-link" href="#Plotting">¶</a></h1>
+<h1 id="Plotting">Plotting<a class="anchor-link" href="#Plotting">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -5078,29 +5182,41 @@ CEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAA
 AQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQg
 AAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAE
 IAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAA
-BCAAAQhAAAIQgAAEIAABCPQKgf8H3VjtkgIQFEsAAAAASUVORK5CYII=" />
+BCAAAQhAAAIQgAAEIAABCPQKgf8H3VjtkgIQFEsAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span><span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"crim"</span><span class="p">]),</span> breaks <span class="o">=</span> <span class="m">50</span><span class="p">,</span> 
-     main <span class="o">=</span> <span class="s">"Histogram of Crime Rate"</span><span class="p">,</span>
-     xlab <span class="o">=</span> <span class="s">"Per-capita-crime-rate-by-town"</span><span class="p">,</span>
-     ylab <span class="o">=</span> <span class="s">"Frequency"</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span><span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;crim&quot;</span><span class="p">]),</span> breaks <span class="o">=</span> <span class="m">50</span><span class="p">,</span> 
+     main <span class="o">=</span> <span class="s">&quot;Histogram of Crime Rate&quot;</span><span class="p">,</span>
+     xlab <span class="o">=</span> <span class="s">&quot;Per-capita-crime-rate-by-town&quot;</span><span class="p">,</span>
+     ylab <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -5732,26 +5848,38 @@ CCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAA
 AggggAACCCCAAAIILGgk+QAAAItJREFUIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAII
 IIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAAC
 CCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCHSMwP8BiuU3
-lde/DN8AAAAASUVORK5CYII=" />
+lde/DN8AAAAASUVORK5CYII=">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">"zn"</span><span class="p">,</span> <span class="s">"indus"</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">"zn"</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">"indus"</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;zn&quot;</span><span class="p">,</span> <span class="s">&quot;indus&quot;</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">&quot;zn&quot;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&quot;indus&quot;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -6397,26 +6525,38 @@ BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAEC
 BAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAjsiMD/Az+DicxAsxwyAAAAAElFTkSuQmCC
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">"rm"</span><span class="p">,</span> <span class="s">"medv"</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">"rm"</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">"medv"</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;rm&quot;</span><span class="p">,</span> <span class="s">&quot;medv&quot;</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">&quot;rm&quot;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&quot;medv&quot;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -7968,57 +8108,73 @@ FFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEAB
 BRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBA
 AQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQ
 QAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUU
-UEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQWaJfA/dL8vKB1sHo0AAAAASUVORK5CYII=" />
+UEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQWaJfA/dL8vKB1sHo0AAAAASUVORK5CYII=">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">¶</a></h3>
+<h3 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>x <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"rm"</span><span class="p">])</span>
-y <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"medv"</span><span class="p">])</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>x <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;rm&quot;</span><span class="p">])</span>
+y <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;medv&quot;</span><span class="p">])</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>fit <span class="o"><-</span> lm<span class="p">(</span>y<span class="o">~</span>x<span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>fit <span class="o">&lt;-</span> lm<span class="p">(</span>y<span class="o">~</span>x<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_text output_subarea ">
 <pre>
 Call:
@@ -8029,36 +8185,48 @@ Residuals:
 -23.346  -2.547   0.090   2.986  39.433 
 
 Coefficients:
-            Estimate Std. Error t value Pr(>|t|)    
-(Intercept)  -34.671      2.650  -13.08   <2e-16 ***
-x              9.102      0.419   21.72   <2e-16 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  -34.671      2.650  -13.08   &lt;2e-16 ***
+x              9.102      0.419   21.72   &lt;2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 6.616 on 504 degrees of freedom
 Multiple R-squared:  0.4835,	Adjusted R-squared:  0.4825 
-F-statistic: 471.8 on 1 and 504 DF,  p-value: < 2.2e-16
+F-statistic: 471.8 on 1 and 504 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">"rm"</span><span class="p">,</span> <span class="s">"medv"</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">"rm"</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">"medv"</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>df<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;rm&quot;</span><span class="p">,</span> <span class="s">&quot;medv&quot;</span><span class="p">)],</span> xlab <span class="o">=</span> <span class="s">&quot;rm&quot;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&quot;medv&quot;</span><span class="p">)</span>
 abline<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAEDWlDQ1BJQ0MgUHJvZmlsZQAA
 OI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9
@@ -9681,79 +9849,93 @@ DWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSg
 AQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0
 oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAG
 NKABDWhAAxrQgAY0oAENaEADGtCABjSgAQ1oQAMa0IAGNKABDWhAAxrQgAY0oAENaEADGtCA
-BjSgAQ3Uy8D/B8Us4QA1/iBEAAAAAElFTkSuQmCC" />
+BjSgAQ3Uy8D/B8Us4QA1/iBEAAAAAElFTkSuQmCC">
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Multiple-Regression-Analysis">Multiple Regression Analysis<a class="anchor-link" href="#Multiple-Regression-Analysis">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [15]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>crim <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"crim"</span><span class="p">])</span>
-zn <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"zn"</span><span class="p">])</span>
-indus <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"indus"</span><span class="p">])</span>
-chas <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"chas"</span><span class="p">])</span>
-nox <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"nox"</span><span class="p">])</span>
-rm <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"rm"</span><span class="p">])</span>
-age <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"age"</span><span class="p">])</span>
-dis <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"dis"</span><span class="p">])</span>
-rad <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"rad"</span><span class="p">])</span>
-tax <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"tax"</span><span class="p">])</span>
-ptratio <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"ptratio"</span><span class="p">])</span>
-black <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"black"</span><span class="p">])</span>
-lstat <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"lstat"</span><span class="p">])</span>
-medv <span class="o"><-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">"medv"</span><span class="p">])</span>
 
-y <span class="o"><-</span> medv
-</pre></div>
+</div>
+
 </div>
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [16]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>fit <span class="o"><-</span> lm<span class="p">(</span>y <span class="o">~</span> crim <span class="o">+</span> zn <span class="o">+</span> indus <span class="o">+</span> chas <span class="o">+</span> nox <span class="o">+</span> rm <span class="o">+</span> age <span class="o">+</span> dis <span class="o">+</span> rad <span class="o">+</span> tax <span class="o">+</span> ptratio <span class="o">+</span> black <span class="o">+</span> lstat<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Step-wise-Selection">Step-wise Selection<a class="anchor-link" href="#Step-wise-Selection">¶</a></h3>
+<h3 id="Multiple-Regression-Analysis">Multiple Regression Analysis<a class="anchor-link" href="#Multiple-Regression-Analysis">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>result <span class="o"><-</span> step<span class="p">(</span>fit<span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>crim <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;crim&quot;</span><span class="p">])</span>
+zn <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;zn&quot;</span><span class="p">])</span>
+indus <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;indus&quot;</span><span class="p">])</span>
+chas <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;chas&quot;</span><span class="p">])</span>
+nox <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;nox&quot;</span><span class="p">])</span>
+rm <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;rm&quot;</span><span class="p">])</span>
+age <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;age&quot;</span><span class="p">])</span>
+dis <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;dis&quot;</span><span class="p">])</span>
+rad <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;rad&quot;</span><span class="p">])</span>
+tax <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;tax&quot;</span><span class="p">])</span>
+ptratio <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;ptratio&quot;</span><span class="p">])</span>
+black <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;black&quot;</span><span class="p">])</span>
+lstat <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;lstat&quot;</span><span class="p">])</span>
+medv <span class="o">&lt;-</span> <span class="kp">data.matrix</span><span class="p">(</span>df<span class="p">[</span><span class="s">&quot;medv&quot;</span><span class="p">])</span>
+
+y <span class="o">&lt;-</span> medv
 </pre></div>
+
 </div>
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>fit <span class="o">&lt;-</span> lm<span class="p">(</span>y <span class="o">~</span> crim <span class="o">+</span> zn <span class="o">+</span> indus <span class="o">+</span> chas <span class="o">+</span> nox <span class="o">+</span> rm <span class="o">+</span> age <span class="o">+</span> dis <span class="o">+</span> rad <span class="o">+</span> tax <span class="o">+</span> ptratio <span class="o">+</span> black <span class="o">+</span> lstat<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-wise-Selection">Step-wise Selection<a class="anchor-link" href="#Step-wise-Selection">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>result <span class="o">&lt;-</span> step<span class="p">(</span>fit<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Start:  AIC=1589.64
 y ~ crim + zn + indus + chas + nox + rm + age + dis + rad + tax + 
@@ -9762,7 +9944,7 @@ y ~ crim + zn + indus + chas + nox + rm + age + dis + rad + tax +
           Df Sum of Sq   RSS    AIC
 - age      1      0.06 11079 1587.7
 - indus    1      2.52 11081 1587.8
-<none>                 11079 1589.6
+&lt;none&gt;                 11079 1589.6
 - chas     1    218.97 11298 1597.5
 - tax      1    242.26 11321 1598.6
 - crim     1    243.22 11322 1598.6
@@ -9781,7 +9963,7 @@ y ~ crim + zn + indus + chas + nox + rm + dis + rad + tax + ptratio +
 
           Df Sum of Sq   RSS    AIC
 - indus    1      2.52 11081 1585.8
-<none>                 11079 1587.7
+&lt;none&gt;                 11079 1587.7
 - chas     1    219.91 11299 1595.6
 - tax      1    242.24 11321 1596.6
 - crim     1    243.20 11322 1596.6
@@ -9799,7 +9981,7 @@ y ~ crim + zn + chas + nox + rm + dis + rad + tax + ptratio +
     black + lstat
 
           Df Sum of Sq   RSS    AIC
-<none>                 11081 1585.8
+&lt;none&gt;                 11081 1585.8
 - chas     1    227.21 11309 1594.0
 - crim     1    245.37 11327 1594.8
 - zn       1    257.82 11339 1595.4
@@ -9814,23 +9996,34 @@ y ~ crim + zn + chas + nox + rm + dis + rad + tax + ptratio +
 </pre>
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>result<span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
+
+
 <div class="output_text output_subarea ">
 <pre>
 Call:
@@ -9842,39 +10035,45 @@ Residuals:
 -15.5984  -2.7386  -0.5046   1.7273  26.2373 
 
 Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
+              Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept)  36.341145   5.067492   7.171 2.73e-12 ***
 crim         -0.108413   0.032779  -3.307 0.001010 ** 
 zn            0.045845   0.013523   3.390 0.000754 ***
 chas          2.718716   0.854240   3.183 0.001551 ** 
 nox         -17.376023   3.535243  -4.915 1.21e-06 ***
-rm            3.801579   0.406316   9.356  < 2e-16 ***
+rm            3.801579   0.406316   9.356  &lt; 2e-16 ***
 dis          -1.492711   0.185731  -8.037 6.84e-15 ***
 rad           0.299608   0.063402   4.726 3.00e-06 ***
 tax          -0.011778   0.003372  -3.493 0.000521 ***
 ptratio      -0.946525   0.129066  -7.334 9.24e-13 ***
 black         0.009291   0.002674   3.475 0.000557 ***
-lstat        -0.522553   0.047424 -11.019  < 2e-16 ***
+lstat        -0.522553   0.047424 -11.019  &lt; 2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 4.736 on 494 degrees of freedom
 Multiple R-squared:  0.7406,	Adjusted R-squared:  0.7348 
-F-statistic: 128.2 on 11 and 494 DF,  p-value: < 2.2e-16
+F-statistic: 128.2 on 11 and 494 DF,  p-value: &lt; 2.2e-16
 </pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr />
+<hr>
+
 </div>
 </div>
 </div>
+ 
+
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -9905,38 +10104,37 @@ F-statistic: 128.2 on 11 and 494 DF,  p-value: < 2.2e-16
 }
 </script>
 
-    </div><!-- /.entry-content -->
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/r.html">R</a>
+    </p>
+  </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+</article>
 
+    <footer>
+<p>&copy; akimach </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " akimach.note ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>
