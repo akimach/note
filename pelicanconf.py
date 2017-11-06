@@ -43,7 +43,7 @@ SOCIAL = (('github', 'https://github.com/akimach'),
 
 ADD_THIS_ID = 'ra-5a002ebf95b44583'
 
-DEFAULT_PAGINATION = 4
+DEFAULT_PAGINATION = 3
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
