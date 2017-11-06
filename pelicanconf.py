@@ -38,3 +38,6 @@ DEFAULT_PAGINATION = 4
 MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
+
+# Theme
+THEME = '/Users/akimach/pelican-themes/blueidea'
