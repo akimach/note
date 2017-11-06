@@ -40,4 +40,4 @@ PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 
 # Theme
-THEME = '/Users/akimach/pelican-themes/blueidea'
+# THEME = '/Users/akimach/pelican-themes/blueidea'
