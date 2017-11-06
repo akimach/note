@@ -1,23 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>akimach.note</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-11-06T00:00:00+09:00</updated><entry><title>Linear regression of Housing Values in Suburbs of Boston using PyData</title><link href="/linear-regression-with-python.html" rel="alternate"></link><published>2017-11-06T00:00:00+09:00</published><updated>2017-11-06T00:00:00+09:00</updated><author><name>akimach</name></author><id>tag:None,2017-11-06:/linear-regression-with-python.html</id><summary type="html">
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;Linear regression of Housing Values in Suburbs of Boston using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.scipy.org/"&gt;scipy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://scikit-learn.org/stable/"&gt;scikit learn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://seaborn.pydata.org/"&gt;seaborn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8" />
+        <title>Linear regression of Housing Values in Suburbs of Boston using PyData</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="akimach.note Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">akimach.note </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="./category/notebook.html">Notebook</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./linear-regression-with-python.html" rel="bookmark"
+           title="Permalink to Linear regression of Housing Values in Suburbs of Boston using PyData">Linear regression of Housing Values in Suburbs of Boston using PyData</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-11-06T00:00:00+09:00">
+                Published: Mon 06 November 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/akimach.html">akimach</a>
+        </address>
+<p>In <a href="./category/notebook.html">Notebook</a>.</p>
+<p>tags: <a href="./tag/python.html">Python</a> <a href="./tag/pydata.html">PyData</a> </p>
+</footer><!-- /.post-info -->      <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -244,7 +264,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell &gt; div.prompt {
+  div.unrecognized_cell > div.prompt {
     display: none;
   }
 }
@@ -297,19 +317,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area &gt; div.highlight {
+div.input_area > div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area &gt; div.highlight &gt; pre {
+div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+/* The following gets added to the <head> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -355,7 +375,7 @@ div.input_area &gt; div.highlight &gt; pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
 
 */
@@ -817,7 +837,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell &gt; div.prompt {
+  div.text_cell > div.prompt {
     display: none;
   }
 }
@@ -882,8 +902,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-&lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -951,8 +971,8 @@ h6:hover .anchor-link {
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -988,78 +1008,78 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;Linear regression of Housing Values in Suburbs of Boston using PyData&lt;a class="anchor-link" href="#Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;PyData family :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.scipy.org/"&gt;scipy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://scikit-learn.org/stable/"&gt;scikit learn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://seaborn.pydata.org/"&gt;seaborn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sp&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sklearn&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
+</style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData">Linear regression of Housing Values in Suburbs of Boston using PyData<a class="anchor-link" href="#Linear-regression-of-Housing-Values-in-Suburbs-of-Boston-using-PyData">¶</a></h2><p>PyData family :</p>
+<ul>
+<li><a href="http://www.numpy.org/">numpy</a></li>
+<li><a href="http://pandas.pydata.org/">pandas</a></li>
+<li><a href="https://www.scipy.org/">scipy</a></li>
+<li><a href="http://scikit-learn.org/stable/">scikit learn</a></li>
+<li><a href="https://matplotlib.org/">matplotlib</a></li>
+<li><a href="https://seaborn.pydata.org/">seaborn</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="kn">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Load-Dataset"&gt;Load Dataset&lt;a class="anchor-link" href="#Load-Dataset"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html"&gt;Housing Values in Suburbs of Boston&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv'&lt;/span&gt;
-&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
-&lt;div&gt;
-&lt;style scoped=""&gt;
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Load-Dataset">Load Dataset<a class="anchor-link" href="#Load-Dataset">¶</a></h3><p><a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Boston.html">Housing Values in Suburbs of Boston</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">'https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/MASS/Boston.csv'</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1071,152 +1091,152 @@ h6:hover .anchor-link {
     .dataframe thead th {
         text-align: right;
     }
-&lt;/style&gt;
-&lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;0&lt;/th&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;0.00632&lt;/td&gt;
-&lt;td&gt;18.0&lt;/td&gt;
-&lt;td&gt;2.31&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.538&lt;/td&gt;
-&lt;td&gt;6.575&lt;/td&gt;
-&lt;td&gt;65.2&lt;/td&gt;
-&lt;td&gt;4.0900&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;296&lt;/td&gt;
-&lt;td&gt;15.3&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;4.98&lt;/td&gt;
-&lt;td&gt;24.0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;1&lt;/th&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;0.02731&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;7.07&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.469&lt;/td&gt;
-&lt;td&gt;6.421&lt;/td&gt;
-&lt;td&gt;78.9&lt;/td&gt;
-&lt;td&gt;4.9671&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;242&lt;/td&gt;
-&lt;td&gt;17.8&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;9.14&lt;/td&gt;
-&lt;td&gt;21.6&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;2&lt;/th&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;0.02729&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;7.07&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.469&lt;/td&gt;
-&lt;td&gt;7.185&lt;/td&gt;
-&lt;td&gt;61.1&lt;/td&gt;
-&lt;td&gt;4.9671&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;242&lt;/td&gt;
-&lt;td&gt;17.8&lt;/td&gt;
-&lt;td&gt;392.83&lt;/td&gt;
-&lt;td&gt;4.03&lt;/td&gt;
-&lt;td&gt;34.7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;3&lt;/th&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;0.03237&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;2.18&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.458&lt;/td&gt;
-&lt;td&gt;6.998&lt;/td&gt;
-&lt;td&gt;45.8&lt;/td&gt;
-&lt;td&gt;6.0622&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;222&lt;/td&gt;
-&lt;td&gt;18.7&lt;/td&gt;
-&lt;td&gt;394.63&lt;/td&gt;
-&lt;td&gt;2.94&lt;/td&gt;
-&lt;td&gt;33.4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;4&lt;/th&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;0.06905&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;2.18&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0.458&lt;/td&gt;
-&lt;td&gt;7.147&lt;/td&gt;
-&lt;td&gt;54.2&lt;/td&gt;
-&lt;td&gt;6.0622&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;222&lt;/td&gt;
-&lt;td&gt;18.7&lt;/td&gt;
-&lt;td&gt;396.90&lt;/td&gt;
-&lt;td&gt;5.33&lt;/td&gt;
-&lt;td&gt;36.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Sampling-Statistic"&gt;Sampling Statistic&lt;a class="anchor-link" href="#Sampling-Statistic"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
-&lt;div&gt;
-&lt;style scoped=""&gt;
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Unnamed: 0</th>
+<th>crim</th>
+<th>zn</th>
+<th>indus</th>
+<th>chas</th>
+<th>nox</th>
+<th>rm</th>
+<th>age</th>
+<th>dis</th>
+<th>rad</th>
+<th>tax</th>
+<th>ptratio</th>
+<th>black</th>
+<th>lstat</th>
+<th>medv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>0.00632</td>
+<td>18.0</td>
+<td>2.31</td>
+<td>0</td>
+<td>0.538</td>
+<td>6.575</td>
+<td>65.2</td>
+<td>4.0900</td>
+<td>1</td>
+<td>296</td>
+<td>15.3</td>
+<td>396.90</td>
+<td>4.98</td>
+<td>24.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>0.02731</td>
+<td>0.0</td>
+<td>7.07</td>
+<td>0</td>
+<td>0.469</td>
+<td>6.421</td>
+<td>78.9</td>
+<td>4.9671</td>
+<td>2</td>
+<td>242</td>
+<td>17.8</td>
+<td>396.90</td>
+<td>9.14</td>
+<td>21.6</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>0.02729</td>
+<td>0.0</td>
+<td>7.07</td>
+<td>0</td>
+<td>0.469</td>
+<td>7.185</td>
+<td>61.1</td>
+<td>4.9671</td>
+<td>2</td>
+<td>242</td>
+<td>17.8</td>
+<td>392.83</td>
+<td>4.03</td>
+<td>34.7</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>0.03237</td>
+<td>0.0</td>
+<td>2.18</td>
+<td>0</td>
+<td>0.458</td>
+<td>6.998</td>
+<td>45.8</td>
+<td>6.0622</td>
+<td>3</td>
+<td>222</td>
+<td>18.7</td>
+<td>394.63</td>
+<td>2.94</td>
+<td>33.4</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>0.06905</td>
+<td>0.0</td>
+<td>2.18</td>
+<td>0</td>
+<td>0.458</td>
+<td>7.147</td>
+<td>54.2</td>
+<td>6.0622</td>
+<td>3</td>
+<td>222</td>
+<td>18.7</td>
+<td>396.90</td>
+<td>5.33</td>
+<td>36.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sampling-Statistic">Sampling Statistic<a class="anchor-link" href="#Sampling-Statistic">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1228,206 +1248,206 @@ h6:hover .anchor-link {
     .dataframe thead th {
         text-align: right;
     }
-&lt;/style&gt;
-&lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;count&lt;/th&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;mean&lt;/th&gt;
-&lt;td&gt;253.500000&lt;/td&gt;
-&lt;td&gt;3.613524&lt;/td&gt;
-&lt;td&gt;11.363636&lt;/td&gt;
-&lt;td&gt;11.136779&lt;/td&gt;
-&lt;td&gt;0.069170&lt;/td&gt;
-&lt;td&gt;0.554695&lt;/td&gt;
-&lt;td&gt;6.284634&lt;/td&gt;
-&lt;td&gt;68.574901&lt;/td&gt;
-&lt;td&gt;3.795043&lt;/td&gt;
-&lt;td&gt;9.549407&lt;/td&gt;
-&lt;td&gt;408.237154&lt;/td&gt;
-&lt;td&gt;18.455534&lt;/td&gt;
-&lt;td&gt;356.674032&lt;/td&gt;
-&lt;td&gt;12.653063&lt;/td&gt;
-&lt;td&gt;22.532806&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;std&lt;/th&gt;
-&lt;td&gt;146.213884&lt;/td&gt;
-&lt;td&gt;8.601545&lt;/td&gt;
-&lt;td&gt;23.322453&lt;/td&gt;
-&lt;td&gt;6.860353&lt;/td&gt;
-&lt;td&gt;0.253994&lt;/td&gt;
-&lt;td&gt;0.115878&lt;/td&gt;
-&lt;td&gt;0.702617&lt;/td&gt;
-&lt;td&gt;28.148861&lt;/td&gt;
-&lt;td&gt;2.105710&lt;/td&gt;
-&lt;td&gt;8.707259&lt;/td&gt;
-&lt;td&gt;168.537116&lt;/td&gt;
-&lt;td&gt;2.164946&lt;/td&gt;
-&lt;td&gt;91.294864&lt;/td&gt;
-&lt;td&gt;7.141062&lt;/td&gt;
-&lt;td&gt;9.197104&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;min&lt;/th&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.006320&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.460000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.385000&lt;/td&gt;
-&lt;td&gt;3.561000&lt;/td&gt;
-&lt;td&gt;2.900000&lt;/td&gt;
-&lt;td&gt;1.129600&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;187.000000&lt;/td&gt;
-&lt;td&gt;12.600000&lt;/td&gt;
-&lt;td&gt;0.320000&lt;/td&gt;
-&lt;td&gt;1.730000&lt;/td&gt;
-&lt;td&gt;5.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;25%&lt;/th&gt;
-&lt;td&gt;127.250000&lt;/td&gt;
-&lt;td&gt;0.082045&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;5.190000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.449000&lt;/td&gt;
-&lt;td&gt;5.885500&lt;/td&gt;
-&lt;td&gt;45.025000&lt;/td&gt;
-&lt;td&gt;2.100175&lt;/td&gt;
-&lt;td&gt;4.000000&lt;/td&gt;
-&lt;td&gt;279.000000&lt;/td&gt;
-&lt;td&gt;17.400000&lt;/td&gt;
-&lt;td&gt;375.377500&lt;/td&gt;
-&lt;td&gt;6.950000&lt;/td&gt;
-&lt;td&gt;17.025000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;50%&lt;/th&gt;
-&lt;td&gt;253.500000&lt;/td&gt;
-&lt;td&gt;0.256510&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;9.690000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.538000&lt;/td&gt;
-&lt;td&gt;6.208500&lt;/td&gt;
-&lt;td&gt;77.500000&lt;/td&gt;
-&lt;td&gt;3.207450&lt;/td&gt;
-&lt;td&gt;5.000000&lt;/td&gt;
-&lt;td&gt;330.000000&lt;/td&gt;
-&lt;td&gt;19.050000&lt;/td&gt;
-&lt;td&gt;391.440000&lt;/td&gt;
-&lt;td&gt;11.360000&lt;/td&gt;
-&lt;td&gt;21.200000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;75%&lt;/th&gt;
-&lt;td&gt;379.750000&lt;/td&gt;
-&lt;td&gt;3.677082&lt;/td&gt;
-&lt;td&gt;12.500000&lt;/td&gt;
-&lt;td&gt;18.100000&lt;/td&gt;
-&lt;td&gt;0.000000&lt;/td&gt;
-&lt;td&gt;0.624000&lt;/td&gt;
-&lt;td&gt;6.623500&lt;/td&gt;
-&lt;td&gt;94.075000&lt;/td&gt;
-&lt;td&gt;5.188425&lt;/td&gt;
-&lt;td&gt;24.000000&lt;/td&gt;
-&lt;td&gt;666.000000&lt;/td&gt;
-&lt;td&gt;20.200000&lt;/td&gt;
-&lt;td&gt;396.225000&lt;/td&gt;
-&lt;td&gt;16.955000&lt;/td&gt;
-&lt;td&gt;25.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;max&lt;/th&gt;
-&lt;td&gt;506.000000&lt;/td&gt;
-&lt;td&gt;88.976200&lt;/td&gt;
-&lt;td&gt;100.000000&lt;/td&gt;
-&lt;td&gt;27.740000&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.871000&lt;/td&gt;
-&lt;td&gt;8.780000&lt;/td&gt;
-&lt;td&gt;100.000000&lt;/td&gt;
-&lt;td&gt;12.126500&lt;/td&gt;
-&lt;td&gt;24.000000&lt;/td&gt;
-&lt;td&gt;711.000000&lt;/td&gt;
-&lt;td&gt;22.000000&lt;/td&gt;
-&lt;td&gt;396.900000&lt;/td&gt;
-&lt;td&gt;37.970000&lt;/td&gt;
-&lt;td&gt;50.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Correlation-coefficient"&gt;Correlation coefficient&lt;a class="anchor-link" href="#Correlation-coefficient"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;corr&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
-&lt;div&gt;
-&lt;style scoped=""&gt;
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Unnamed: 0</th>
+<th>crim</th>
+<th>zn</th>
+<th>indus</th>
+<th>chas</th>
+<th>nox</th>
+<th>rm</th>
+<th>age</th>
+<th>dis</th>
+<th>rad</th>
+<th>tax</th>
+<th>ptratio</th>
+<th>black</th>
+<th>lstat</th>
+<th>medv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+<td>506.000000</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>253.500000</td>
+<td>3.613524</td>
+<td>11.363636</td>
+<td>11.136779</td>
+<td>0.069170</td>
+<td>0.554695</td>
+<td>6.284634</td>
+<td>68.574901</td>
+<td>3.795043</td>
+<td>9.549407</td>
+<td>408.237154</td>
+<td>18.455534</td>
+<td>356.674032</td>
+<td>12.653063</td>
+<td>22.532806</td>
+</tr>
+<tr>
+<th>std</th>
+<td>146.213884</td>
+<td>8.601545</td>
+<td>23.322453</td>
+<td>6.860353</td>
+<td>0.253994</td>
+<td>0.115878</td>
+<td>0.702617</td>
+<td>28.148861</td>
+<td>2.105710</td>
+<td>8.707259</td>
+<td>168.537116</td>
+<td>2.164946</td>
+<td>91.294864</td>
+<td>7.141062</td>
+<td>9.197104</td>
+</tr>
+<tr>
+<th>min</th>
+<td>1.000000</td>
+<td>0.006320</td>
+<td>0.000000</td>
+<td>0.460000</td>
+<td>0.000000</td>
+<td>0.385000</td>
+<td>3.561000</td>
+<td>2.900000</td>
+<td>1.129600</td>
+<td>1.000000</td>
+<td>187.000000</td>
+<td>12.600000</td>
+<td>0.320000</td>
+<td>1.730000</td>
+<td>5.000000</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>127.250000</td>
+<td>0.082045</td>
+<td>0.000000</td>
+<td>5.190000</td>
+<td>0.000000</td>
+<td>0.449000</td>
+<td>5.885500</td>
+<td>45.025000</td>
+<td>2.100175</td>
+<td>4.000000</td>
+<td>279.000000</td>
+<td>17.400000</td>
+<td>375.377500</td>
+<td>6.950000</td>
+<td>17.025000</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>253.500000</td>
+<td>0.256510</td>
+<td>0.000000</td>
+<td>9.690000</td>
+<td>0.000000</td>
+<td>0.538000</td>
+<td>6.208500</td>
+<td>77.500000</td>
+<td>3.207450</td>
+<td>5.000000</td>
+<td>330.000000</td>
+<td>19.050000</td>
+<td>391.440000</td>
+<td>11.360000</td>
+<td>21.200000</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>379.750000</td>
+<td>3.677082</td>
+<td>12.500000</td>
+<td>18.100000</td>
+<td>0.000000</td>
+<td>0.624000</td>
+<td>6.623500</td>
+<td>94.075000</td>
+<td>5.188425</td>
+<td>24.000000</td>
+<td>666.000000</td>
+<td>20.200000</td>
+<td>396.225000</td>
+<td>16.955000</td>
+<td>25.000000</td>
+</tr>
+<tr>
+<th>max</th>
+<td>506.000000</td>
+<td>88.976200</td>
+<td>100.000000</td>
+<td>27.740000</td>
+<td>1.000000</td>
+<td>0.871000</td>
+<td>8.780000</td>
+<td>100.000000</td>
+<td>12.126500</td>
+<td>24.000000</td>
+<td>711.000000</td>
+<td>22.000000</td>
+<td>396.900000</td>
+<td>37.970000</td>
+<td>50.000000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlation-coefficient">Correlation coefficient<a class="anchor-link" href="#Correlation-coefficient">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1439,356 +1459,356 @@ h6:hover .anchor-link {
     .dataframe thead th {
         text-align: right;
     }
-&lt;/style&gt;
-&lt;table border="1" class="dataframe"&gt;
-&lt;thead&gt;
-&lt;tr style="text-align: right;"&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;Unnamed: 0&lt;/th&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.407407&lt;/td&gt;
-&lt;td&gt;-0.103393&lt;/td&gt;
-&lt;td&gt;0.399439&lt;/td&gt;
-&lt;td&gt;-0.003759&lt;/td&gt;
-&lt;td&gt;0.398736&lt;/td&gt;
-&lt;td&gt;-0.079971&lt;/td&gt;
-&lt;td&gt;0.203784&lt;/td&gt;
-&lt;td&gt;-0.302211&lt;/td&gt;
-&lt;td&gt;0.686002&lt;/td&gt;
-&lt;td&gt;0.666626&lt;/td&gt;
-&lt;td&gt;0.291074&lt;/td&gt;
-&lt;td&gt;-0.295041&lt;/td&gt;
-&lt;td&gt;0.258465&lt;/td&gt;
-&lt;td&gt;-0.226604&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;crim&lt;/th&gt;
-&lt;td&gt;0.407407&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.200469&lt;/td&gt;
-&lt;td&gt;0.406583&lt;/td&gt;
-&lt;td&gt;-0.055892&lt;/td&gt;
-&lt;td&gt;0.420972&lt;/td&gt;
-&lt;td&gt;-0.219247&lt;/td&gt;
-&lt;td&gt;0.352734&lt;/td&gt;
-&lt;td&gt;-0.379670&lt;/td&gt;
-&lt;td&gt;0.625505&lt;/td&gt;
-&lt;td&gt;0.582764&lt;/td&gt;
-&lt;td&gt;0.289946&lt;/td&gt;
-&lt;td&gt;-0.385064&lt;/td&gt;
-&lt;td&gt;0.455621&lt;/td&gt;
-&lt;td&gt;-0.388305&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;zn&lt;/th&gt;
-&lt;td&gt;-0.103393&lt;/td&gt;
-&lt;td&gt;-0.200469&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.533828&lt;/td&gt;
-&lt;td&gt;-0.042697&lt;/td&gt;
-&lt;td&gt;-0.516604&lt;/td&gt;
-&lt;td&gt;0.311991&lt;/td&gt;
-&lt;td&gt;-0.569537&lt;/td&gt;
-&lt;td&gt;0.664408&lt;/td&gt;
-&lt;td&gt;-0.311948&lt;/td&gt;
-&lt;td&gt;-0.314563&lt;/td&gt;
-&lt;td&gt;-0.391679&lt;/td&gt;
-&lt;td&gt;0.175520&lt;/td&gt;
-&lt;td&gt;-0.412995&lt;/td&gt;
-&lt;td&gt;0.360445&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;indus&lt;/th&gt;
-&lt;td&gt;0.399439&lt;/td&gt;
-&lt;td&gt;0.406583&lt;/td&gt;
-&lt;td&gt;-0.533828&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.062938&lt;/td&gt;
-&lt;td&gt;0.763651&lt;/td&gt;
-&lt;td&gt;-0.391676&lt;/td&gt;
-&lt;td&gt;0.644779&lt;/td&gt;
-&lt;td&gt;-0.708027&lt;/td&gt;
-&lt;td&gt;0.595129&lt;/td&gt;
-&lt;td&gt;0.720760&lt;/td&gt;
-&lt;td&gt;0.383248&lt;/td&gt;
-&lt;td&gt;-0.356977&lt;/td&gt;
-&lt;td&gt;0.603800&lt;/td&gt;
-&lt;td&gt;-0.483725&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;chas&lt;/th&gt;
-&lt;td&gt;-0.003759&lt;/td&gt;
-&lt;td&gt;-0.055892&lt;/td&gt;
-&lt;td&gt;-0.042697&lt;/td&gt;
-&lt;td&gt;0.062938&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.091203&lt;/td&gt;
-&lt;td&gt;0.091251&lt;/td&gt;
-&lt;td&gt;0.086518&lt;/td&gt;
-&lt;td&gt;-0.099176&lt;/td&gt;
-&lt;td&gt;-0.007368&lt;/td&gt;
-&lt;td&gt;-0.035587&lt;/td&gt;
-&lt;td&gt;-0.121515&lt;/td&gt;
-&lt;td&gt;0.048788&lt;/td&gt;
-&lt;td&gt;-0.053929&lt;/td&gt;
-&lt;td&gt;0.175260&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;nox&lt;/th&gt;
-&lt;td&gt;0.398736&lt;/td&gt;
-&lt;td&gt;0.420972&lt;/td&gt;
-&lt;td&gt;-0.516604&lt;/td&gt;
-&lt;td&gt;0.763651&lt;/td&gt;
-&lt;td&gt;0.091203&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.302188&lt;/td&gt;
-&lt;td&gt;0.731470&lt;/td&gt;
-&lt;td&gt;-0.769230&lt;/td&gt;
-&lt;td&gt;0.611441&lt;/td&gt;
-&lt;td&gt;0.668023&lt;/td&gt;
-&lt;td&gt;0.188933&lt;/td&gt;
-&lt;td&gt;-0.380051&lt;/td&gt;
-&lt;td&gt;0.590879&lt;/td&gt;
-&lt;td&gt;-0.427321&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;rm&lt;/th&gt;
-&lt;td&gt;-0.079971&lt;/td&gt;
-&lt;td&gt;-0.219247&lt;/td&gt;
-&lt;td&gt;0.311991&lt;/td&gt;
-&lt;td&gt;-0.391676&lt;/td&gt;
-&lt;td&gt;0.091251&lt;/td&gt;
-&lt;td&gt;-0.302188&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.240265&lt;/td&gt;
-&lt;td&gt;0.205246&lt;/td&gt;
-&lt;td&gt;-0.209847&lt;/td&gt;
-&lt;td&gt;-0.292048&lt;/td&gt;
-&lt;td&gt;-0.355501&lt;/td&gt;
-&lt;td&gt;0.128069&lt;/td&gt;
-&lt;td&gt;-0.613808&lt;/td&gt;
-&lt;td&gt;0.695360&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;age&lt;/th&gt;
-&lt;td&gt;0.203784&lt;/td&gt;
-&lt;td&gt;0.352734&lt;/td&gt;
-&lt;td&gt;-0.569537&lt;/td&gt;
-&lt;td&gt;0.644779&lt;/td&gt;
-&lt;td&gt;0.086518&lt;/td&gt;
-&lt;td&gt;0.731470&lt;/td&gt;
-&lt;td&gt;-0.240265&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.747881&lt;/td&gt;
-&lt;td&gt;0.456022&lt;/td&gt;
-&lt;td&gt;0.506456&lt;/td&gt;
-&lt;td&gt;0.261515&lt;/td&gt;
-&lt;td&gt;-0.273534&lt;/td&gt;
-&lt;td&gt;0.602339&lt;/td&gt;
-&lt;td&gt;-0.376955&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;dis&lt;/th&gt;
-&lt;td&gt;-0.302211&lt;/td&gt;
-&lt;td&gt;-0.379670&lt;/td&gt;
-&lt;td&gt;0.664408&lt;/td&gt;
-&lt;td&gt;-0.708027&lt;/td&gt;
-&lt;td&gt;-0.099176&lt;/td&gt;
-&lt;td&gt;-0.769230&lt;/td&gt;
-&lt;td&gt;0.205246&lt;/td&gt;
-&lt;td&gt;-0.747881&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.494588&lt;/td&gt;
-&lt;td&gt;-0.534432&lt;/td&gt;
-&lt;td&gt;-0.232471&lt;/td&gt;
-&lt;td&gt;0.291512&lt;/td&gt;
-&lt;td&gt;-0.496996&lt;/td&gt;
-&lt;td&gt;0.249929&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;rad&lt;/th&gt;
-&lt;td&gt;0.686002&lt;/td&gt;
-&lt;td&gt;0.625505&lt;/td&gt;
-&lt;td&gt;-0.311948&lt;/td&gt;
-&lt;td&gt;0.595129&lt;/td&gt;
-&lt;td&gt;-0.007368&lt;/td&gt;
-&lt;td&gt;0.611441&lt;/td&gt;
-&lt;td&gt;-0.209847&lt;/td&gt;
-&lt;td&gt;0.456022&lt;/td&gt;
-&lt;td&gt;-0.494588&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.910228&lt;/td&gt;
-&lt;td&gt;0.464741&lt;/td&gt;
-&lt;td&gt;-0.444413&lt;/td&gt;
-&lt;td&gt;0.488676&lt;/td&gt;
-&lt;td&gt;-0.381626&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;tax&lt;/th&gt;
-&lt;td&gt;0.666626&lt;/td&gt;
-&lt;td&gt;0.582764&lt;/td&gt;
-&lt;td&gt;-0.314563&lt;/td&gt;
-&lt;td&gt;0.720760&lt;/td&gt;
-&lt;td&gt;-0.035587&lt;/td&gt;
-&lt;td&gt;0.668023&lt;/td&gt;
-&lt;td&gt;-0.292048&lt;/td&gt;
-&lt;td&gt;0.506456&lt;/td&gt;
-&lt;td&gt;-0.534432&lt;/td&gt;
-&lt;td&gt;0.910228&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;0.460853&lt;/td&gt;
-&lt;td&gt;-0.441808&lt;/td&gt;
-&lt;td&gt;0.543993&lt;/td&gt;
-&lt;td&gt;-0.468536&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;ptratio&lt;/th&gt;
-&lt;td&gt;0.291074&lt;/td&gt;
-&lt;td&gt;0.289946&lt;/td&gt;
-&lt;td&gt;-0.391679&lt;/td&gt;
-&lt;td&gt;0.383248&lt;/td&gt;
-&lt;td&gt;-0.121515&lt;/td&gt;
-&lt;td&gt;0.188933&lt;/td&gt;
-&lt;td&gt;-0.355501&lt;/td&gt;
-&lt;td&gt;0.261515&lt;/td&gt;
-&lt;td&gt;-0.232471&lt;/td&gt;
-&lt;td&gt;0.464741&lt;/td&gt;
-&lt;td&gt;0.460853&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.177383&lt;/td&gt;
-&lt;td&gt;0.374044&lt;/td&gt;
-&lt;td&gt;-0.507787&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;black&lt;/th&gt;
-&lt;td&gt;-0.295041&lt;/td&gt;
-&lt;td&gt;-0.385064&lt;/td&gt;
-&lt;td&gt;0.175520&lt;/td&gt;
-&lt;td&gt;-0.356977&lt;/td&gt;
-&lt;td&gt;0.048788&lt;/td&gt;
-&lt;td&gt;-0.380051&lt;/td&gt;
-&lt;td&gt;0.128069&lt;/td&gt;
-&lt;td&gt;-0.273534&lt;/td&gt;
-&lt;td&gt;0.291512&lt;/td&gt;
-&lt;td&gt;-0.444413&lt;/td&gt;
-&lt;td&gt;-0.441808&lt;/td&gt;
-&lt;td&gt;-0.177383&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.366087&lt;/td&gt;
-&lt;td&gt;0.333461&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;lstat&lt;/th&gt;
-&lt;td&gt;0.258465&lt;/td&gt;
-&lt;td&gt;0.455621&lt;/td&gt;
-&lt;td&gt;-0.412995&lt;/td&gt;
-&lt;td&gt;0.603800&lt;/td&gt;
-&lt;td&gt;-0.053929&lt;/td&gt;
-&lt;td&gt;0.590879&lt;/td&gt;
-&lt;td&gt;-0.613808&lt;/td&gt;
-&lt;td&gt;0.602339&lt;/td&gt;
-&lt;td&gt;-0.496996&lt;/td&gt;
-&lt;td&gt;0.488676&lt;/td&gt;
-&lt;td&gt;0.543993&lt;/td&gt;
-&lt;td&gt;0.374044&lt;/td&gt;
-&lt;td&gt;-0.366087&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;td&gt;-0.737663&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;medv&lt;/th&gt;
-&lt;td&gt;-0.226604&lt;/td&gt;
-&lt;td&gt;-0.388305&lt;/td&gt;
-&lt;td&gt;0.360445&lt;/td&gt;
-&lt;td&gt;-0.483725&lt;/td&gt;
-&lt;td&gt;0.175260&lt;/td&gt;
-&lt;td&gt;-0.427321&lt;/td&gt;
-&lt;td&gt;0.695360&lt;/td&gt;
-&lt;td&gt;-0.376955&lt;/td&gt;
-&lt;td&gt;0.249929&lt;/td&gt;
-&lt;td&gt;-0.381626&lt;/td&gt;
-&lt;td&gt;-0.468536&lt;/td&gt;
-&lt;td&gt;-0.507787&lt;/td&gt;
-&lt;td&gt;0.333461&lt;/td&gt;
-&lt;td&gt;-0.737663&lt;/td&gt;
-&lt;td&gt;1.000000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;corrcoef&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;array([[ 1.        ,  0.69535995],
-       [ 0.69535995,  1.        ]])&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Plotting-Histogram"&gt;Plotting Histogram&lt;a class="anchor-link" href="#Plotting-Histogram"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Histogram of Crime Rate'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Per capita crime rate by town'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Frequency'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAETCAYAAADd6corAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Unnamed: 0</th>
+<th>crim</th>
+<th>zn</th>
+<th>indus</th>
+<th>chas</th>
+<th>nox</th>
+<th>rm</th>
+<th>age</th>
+<th>dis</th>
+<th>rad</th>
+<th>tax</th>
+<th>ptratio</th>
+<th>black</th>
+<th>lstat</th>
+<th>medv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Unnamed: 0</th>
+<td>1.000000</td>
+<td>0.407407</td>
+<td>-0.103393</td>
+<td>0.399439</td>
+<td>-0.003759</td>
+<td>0.398736</td>
+<td>-0.079971</td>
+<td>0.203784</td>
+<td>-0.302211</td>
+<td>0.686002</td>
+<td>0.666626</td>
+<td>0.291074</td>
+<td>-0.295041</td>
+<td>0.258465</td>
+<td>-0.226604</td>
+</tr>
+<tr>
+<th>crim</th>
+<td>0.407407</td>
+<td>1.000000</td>
+<td>-0.200469</td>
+<td>0.406583</td>
+<td>-0.055892</td>
+<td>0.420972</td>
+<td>-0.219247</td>
+<td>0.352734</td>
+<td>-0.379670</td>
+<td>0.625505</td>
+<td>0.582764</td>
+<td>0.289946</td>
+<td>-0.385064</td>
+<td>0.455621</td>
+<td>-0.388305</td>
+</tr>
+<tr>
+<th>zn</th>
+<td>-0.103393</td>
+<td>-0.200469</td>
+<td>1.000000</td>
+<td>-0.533828</td>
+<td>-0.042697</td>
+<td>-0.516604</td>
+<td>0.311991</td>
+<td>-0.569537</td>
+<td>0.664408</td>
+<td>-0.311948</td>
+<td>-0.314563</td>
+<td>-0.391679</td>
+<td>0.175520</td>
+<td>-0.412995</td>
+<td>0.360445</td>
+</tr>
+<tr>
+<th>indus</th>
+<td>0.399439</td>
+<td>0.406583</td>
+<td>-0.533828</td>
+<td>1.000000</td>
+<td>0.062938</td>
+<td>0.763651</td>
+<td>-0.391676</td>
+<td>0.644779</td>
+<td>-0.708027</td>
+<td>0.595129</td>
+<td>0.720760</td>
+<td>0.383248</td>
+<td>-0.356977</td>
+<td>0.603800</td>
+<td>-0.483725</td>
+</tr>
+<tr>
+<th>chas</th>
+<td>-0.003759</td>
+<td>-0.055892</td>
+<td>-0.042697</td>
+<td>0.062938</td>
+<td>1.000000</td>
+<td>0.091203</td>
+<td>0.091251</td>
+<td>0.086518</td>
+<td>-0.099176</td>
+<td>-0.007368</td>
+<td>-0.035587</td>
+<td>-0.121515</td>
+<td>0.048788</td>
+<td>-0.053929</td>
+<td>0.175260</td>
+</tr>
+<tr>
+<th>nox</th>
+<td>0.398736</td>
+<td>0.420972</td>
+<td>-0.516604</td>
+<td>0.763651</td>
+<td>0.091203</td>
+<td>1.000000</td>
+<td>-0.302188</td>
+<td>0.731470</td>
+<td>-0.769230</td>
+<td>0.611441</td>
+<td>0.668023</td>
+<td>0.188933</td>
+<td>-0.380051</td>
+<td>0.590879</td>
+<td>-0.427321</td>
+</tr>
+<tr>
+<th>rm</th>
+<td>-0.079971</td>
+<td>-0.219247</td>
+<td>0.311991</td>
+<td>-0.391676</td>
+<td>0.091251</td>
+<td>-0.302188</td>
+<td>1.000000</td>
+<td>-0.240265</td>
+<td>0.205246</td>
+<td>-0.209847</td>
+<td>-0.292048</td>
+<td>-0.355501</td>
+<td>0.128069</td>
+<td>-0.613808</td>
+<td>0.695360</td>
+</tr>
+<tr>
+<th>age</th>
+<td>0.203784</td>
+<td>0.352734</td>
+<td>-0.569537</td>
+<td>0.644779</td>
+<td>0.086518</td>
+<td>0.731470</td>
+<td>-0.240265</td>
+<td>1.000000</td>
+<td>-0.747881</td>
+<td>0.456022</td>
+<td>0.506456</td>
+<td>0.261515</td>
+<td>-0.273534</td>
+<td>0.602339</td>
+<td>-0.376955</td>
+</tr>
+<tr>
+<th>dis</th>
+<td>-0.302211</td>
+<td>-0.379670</td>
+<td>0.664408</td>
+<td>-0.708027</td>
+<td>-0.099176</td>
+<td>-0.769230</td>
+<td>0.205246</td>
+<td>-0.747881</td>
+<td>1.000000</td>
+<td>-0.494588</td>
+<td>-0.534432</td>
+<td>-0.232471</td>
+<td>0.291512</td>
+<td>-0.496996</td>
+<td>0.249929</td>
+</tr>
+<tr>
+<th>rad</th>
+<td>0.686002</td>
+<td>0.625505</td>
+<td>-0.311948</td>
+<td>0.595129</td>
+<td>-0.007368</td>
+<td>0.611441</td>
+<td>-0.209847</td>
+<td>0.456022</td>
+<td>-0.494588</td>
+<td>1.000000</td>
+<td>0.910228</td>
+<td>0.464741</td>
+<td>-0.444413</td>
+<td>0.488676</td>
+<td>-0.381626</td>
+</tr>
+<tr>
+<th>tax</th>
+<td>0.666626</td>
+<td>0.582764</td>
+<td>-0.314563</td>
+<td>0.720760</td>
+<td>-0.035587</td>
+<td>0.668023</td>
+<td>-0.292048</td>
+<td>0.506456</td>
+<td>-0.534432</td>
+<td>0.910228</td>
+<td>1.000000</td>
+<td>0.460853</td>
+<td>-0.441808</td>
+<td>0.543993</td>
+<td>-0.468536</td>
+</tr>
+<tr>
+<th>ptratio</th>
+<td>0.291074</td>
+<td>0.289946</td>
+<td>-0.391679</td>
+<td>0.383248</td>
+<td>-0.121515</td>
+<td>0.188933</td>
+<td>-0.355501</td>
+<td>0.261515</td>
+<td>-0.232471</td>
+<td>0.464741</td>
+<td>0.460853</td>
+<td>1.000000</td>
+<td>-0.177383</td>
+<td>0.374044</td>
+<td>-0.507787</td>
+</tr>
+<tr>
+<th>black</th>
+<td>-0.295041</td>
+<td>-0.385064</td>
+<td>0.175520</td>
+<td>-0.356977</td>
+<td>0.048788</td>
+<td>-0.380051</td>
+<td>0.128069</td>
+<td>-0.273534</td>
+<td>0.291512</td>
+<td>-0.444413</td>
+<td>-0.441808</td>
+<td>-0.177383</td>
+<td>1.000000</td>
+<td>-0.366087</td>
+<td>0.333461</td>
+</tr>
+<tr>
+<th>lstat</th>
+<td>0.258465</td>
+<td>0.455621</td>
+<td>-0.412995</td>
+<td>0.603800</td>
+<td>-0.053929</td>
+<td>0.590879</td>
+<td>-0.613808</td>
+<td>0.602339</td>
+<td>-0.496996</td>
+<td>0.488676</td>
+<td>0.543993</td>
+<td>0.374044</td>
+<td>-0.366087</td>
+<td>1.000000</td>
+<td>-0.737663</td>
+</tr>
+<tr>
+<th>medv</th>
+<td>-0.226604</td>
+<td>-0.388305</td>
+<td>0.360445</td>
+<td>-0.483725</td>
+<td>0.175260</td>
+<td>-0.427321</td>
+<td>0.695360</td>
+<td>-0.376955</td>
+<td>0.249929</td>
+<td>-0.381626</td>
+<td>-0.468536</td>
+<td>-0.507787</td>
+<td>0.333461</td>
+<td>-0.737663</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">rm</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">medv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 1.        ,  0.69535995],
+       [ 0.69535995,  1.        ]])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Plotting-Histogram">Plotting Histogram<a class="anchor-link" href="#Plotting-Histogram">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Histogram of Crime Rate'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Per capita crime rate by town'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Frequency'</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">crim</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAETCAYAAADd6corAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAHJRJREFUeJzt3XucHHWd7vHPwyVABATChCgYooLK
 LmLQiICwRo2CChwVD4osAgIR1vWKsJz1oKvrhdXVIwhiIpG4Lke5yVWCKDCGkAAbMNzxwhpUNoFE
@@ -1920,44 +1940,44 @@ FPOtAfr3917nAqdJOovqInDfkHRDee1HVFcKbbUUmCbp01SHkY4s7/FhSUupDhH15W5VN/g5lmrb
 nylpY6o9hg+UZSyQNB64wPYzkhax+oUcYwTIr5VivVUOqxxn+95O17K+kDSGKmim2X6i0/XE8JXD
 ShGjRDlEdgNwdoIhBpI9h4iIqMmeQ0RE1CQcIiKiJuEQERE1CYeIiKhJOERERM1/A3FAkJlOpxrm
 AAAAAElFTkSuQmCC
-" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Plotting-Scattergraph"&gt;Plotting Scattergraph&lt;a class="anchor-link" href="#Plotting-Scattergraph"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Proportion of residential land zoned for lots over 25,000 sq.ft'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Proportion of non-retail business acres per town'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;indus&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;&lt;matplotlib.collections.pathcollection at 0x114cfb990&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEICAYAAAC55kg0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Plotting-Scattergraph">Plotting Scattergraph<a class="anchor-link" href="#Plotting-Scattergraph">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Proportion of residential land zoned for lots over 25,000 sq.ft'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Proportion of non-retail business acres per town'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">zn</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">indus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre><matplotlib.collections.pathcollection at 0x114cfb990></pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEICAYAAAC55kg0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xu8VHW9//HXuy03FSUUNVHEFPWU
 oZ728ZKX0ERJPaXZrywttRNkJ6uTZQczMytTj2VpmYlZllpmWZSJKOnBW4hhGmRRZoGEihh5yQOi
@@ -2146,36 +2166,36 @@ XClpLsn39UMR8QIwT9LPST7jl0iqM+cBSPog8AtJL5Ak2M8VxbMF8I00ET6fvuaLwLWS7iCpmluc
 7mtPYGpEHFe0j/W+31GHDhq18gRyNUqTwHURsW+TQzHrapI+CjwTEVc1MYa7STqGLGpWDAPlkoCZ
 dYrlJFV+NgAuCZiZdTE3DJuZdTEnATOzLuYkYGbWxZwEzMy6mJOAmVkX+/8pqHVy2dmr+wAAAABJ
 RU5ErkJggg==
-" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Average number of rooms per dwelling'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Median value of owner-occupied homes in \$1000s'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[9]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;&lt;matplotlib.collections.pathcollection at 0x114ef0850&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEPCAYAAACk43iMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Average number of rooms per dwelling'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Median value of owner-occupied homes in \$1000s'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">rm</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">medv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre><matplotlib.collections.pathcollection at 0x114ef0850></pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYEAAAEPCAYAAACk43iMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJztnXuYXFWV6H+rO5XQzauDxhF6CMFX
 4mBMIhlFcJSgl6gI0xdURBQUx6jzBJ04AeUpI/HmIuoMKuhcUXEw8rAl8vIRUHlEJrETYkYioDym
@@ -2439,172 +2459,172 @@ wVtV1NLv3/i2/zV4K7K1Za/dI17CuWtVdcz/jB/wX/tRNe04MB1v1bobb6LxHrziPkZGWAI5o2ZE
 5A14pqbT8X64PwH+UVXXxJ5opIZ4jvOPqup7Gi1LGojIKcBrgU/iTTAGgL8sM0saKWMrAaMeHsKb
 ud2C5wy8l+pn74ZRzgbgY3jO8mnA100BZIutBAzDMNoY2ydgGIbRxpgSMAzDaGNMCRiGYbQxpgQM
 wzDaGFMChmEYbYwpAcMwjDbm/wP+7z9diWICJAAAAABJRU5ErkJggg==
-" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Linear-Regression"&gt;Linear Regression&lt;a class="anchor-link" href="#Linear-Regression"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_matrix&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_matrix&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stderr output_text"&gt;
-&lt;pre&gt;/Users/akimach/pelican-env/lib/python2.7/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rm</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">medv</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/akimach/pelican-env/lib/python2.7/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
   warnings.warn(mesg, RuntimeWarning)
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Coefficient:{}, Intercept:{}"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coef_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intercept_&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;Coefficient:[[ 9.10210898]], Intercept:[-34.67062078]
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"R^2 :&lt;/span&gt;&lt;span class="si"&gt;%f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;R^2 :0.483525
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coef_&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intercept_&lt;/span&gt;
-&lt;span class="n"&gt;_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Re-plotting"&gt;Re-plotting&lt;a class="anchor-link" href="#Re-plotting"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Average number of rooms per dwelling'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Median value of owner-occupied homes in \$1000s'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;medv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'deepskyblue'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.lines.line2d at 0x11576db10&gt;]&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAEPCAYAAACp/QjLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">"Coefficient:{}, Intercept:{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Coefficient:[[ 9.10210898]], Intercept:[-34.67062078]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">"R^2 :</span><span class="si">%f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>R^2 :0.483525
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">_y</span> <span class="o">=</span> <span class="n">_x</span> <span class="o">*</span> <span class="n">clf</span><span class="o">.</span><span class="n">coef_</span> <span class="o">+</span> <span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span>
+<span class="n">_y</span> <span class="o">=</span> <span class="n">_y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Re-plotting">Re-plotting<a class="anchor-link" href="#Re-plotting">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Average number of rooms per dwelling'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Median value of owner-occupied homes in \$1000s'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">rm</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">medv</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span> <span class="n">_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'deepskyblue'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>[<matplotlib.lines.line2d at 0x11576db10>]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAEPCAYAAACp/QjLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsnXl8XHXV/98nyaSdNG2StumS0HRf
 00IrEYEiFPRHUQQrqIiiLGpFVASxWnyQTZQ+T1UUFaXoIy48ioBGEAQXoLJDS1ra0n0n3ZsmXZI2
@@ -2926,22 +2946,22 @@ r/0jlnE8UIIzy23FuQH5BE4DJSNFmPCekXRE5CyckNWVOP/Q/wKuV9VXI77RSBriJOyvVdVPZNqW
 ZCAilwOnAd/AufGoAd4dFN40kozNHIz/374dGgEIxUAUPEet9EQf9ICjAHpBxDBzCvHdbhMvmUxW
 eDKT3pk5Ql75P+3D151kzxzptySHMKxlcwCg+HMAoIgDAEUcACjiAEARBwCKOABQXtKqbNYNX45V
 AAAAAElFTkSuQmCC
-" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+</div>
+</div>
+</div>
 
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -2968,5 +2988,40 @@ AAAAAElFTkSuQmCC
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;
-</content><category term="Python"></category><category term="PyData"></category></entry></feed>
+</script>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
