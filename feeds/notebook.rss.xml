@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>akimach.note - Notebook</title><link>https://akimach.github.io/note/</link><description></description><lastBuildDate>Mon, 06 Nov 2017 17:00:00 +0900</lastBuildDate><item><title>Linear regression of Boston Housing Dataset using R</title><link>https://akimach.github.io/note/linear-regression-with-r.html</link><description>
+<rss version="2.0"><channel><title>akimach.note - Notebook</title><link>https://akimach.github.io/note/</link><description></description><lastBuildDate>Sun, 12 Nov 2017 19:45:00 +0900</lastBuildDate><item><title>Complex Number With Python</title><link>https://akimach.github.io/note/complex-number-with-python.html</link><description>
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">akimach</dc:creator><pubDate>Sun, 12 Nov 2017 19:45:00 +0900</pubDate><guid isPermaLink="false">tag:akimach.github.io,2017-11-12:/note/complex-number-with-python.html</guid><category>Python</category><category>PyData</category></item><item><title>Linear regression of Boston Housing Dataset using R</title><link>https://akimach.github.io/note/linear-regression-with-r.html</link><description>
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
